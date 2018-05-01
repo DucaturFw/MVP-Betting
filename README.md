@@ -1,1 +1,1 @@
-"# Betting" 
+# Betting

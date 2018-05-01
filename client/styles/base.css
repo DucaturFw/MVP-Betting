@@ -1,0 +1,3041 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background: rgba(255, 255, 255, 1.0);
+}
+
+.mvp-new {
+    width: 100%;
+    min-width: 1440px;
+    height: 100vh;
+    min-height: 1000px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 1.0)
+}
+
+a {
+    text-decoration: none
+}
+
+div {
+    -webkit-text-size-adjust: none
+}
+
+.mvp-new .b-g {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 1600px;
+    width: 1440px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .oval {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: -100px;
+    height: 1068px;
+    width: 1647px;
+    position: absolute;
+    margin: 0;
+    left: -104px;
+    opacity: .57
+}
+
+.mvp-new .map {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 87px;
+    height: 651px;
+    width: 1289px;
+    position: absolute;
+    margin: 0;
+    left: 76px;
+    opacity: .65
+}
+
+.mvp-new .bull-and-bear {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 10px;
+    height: 782px;
+    width: 1561px;
+    position: absolute;
+    margin: 0;
+    left: -44px
+}
+
+.mvp-new .bull-and-bear .page1 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 782px;
+    width: 608px;
+    position: absolute;
+    margin: 0;
+    left: 876px;
+    opacity: .23
+}
+
+.mvp-new .bull-and-bear .page1-copy {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 782px;
+    width: 608px;
+    position: absolute;
+    margin: 0;
+    left: 38px;
+    opacity: .23
+}
+
+.mvp-new .bull-and-bear .page1-copy .fill1 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 604px;
+    height: 178px;
+    width: 293px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 579px;
+    width: 608px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .group4 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 158px;
+    width: 266px;
+    position: absolute;
+    margin: 0;
+    left: 62px
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .fill5 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 306px;
+    height: 61px;
+    width: 95px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .fill7 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 79px;
+    height: 211px;
+    width: 343px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .group11 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 189px;
+    width: 317px;
+    position: absolute;
+    margin: 0;
+    left: 242px
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .fill12 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 19px;
+    height: 258px;
+    width: 424px;
+    position: absolute;
+    margin: 0;
+    left: 184px
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .fill14 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 160px;
+    height: 119px;
+    width: 196px;
+    position: absolute;
+    margin: 0;
+    left: 135px
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .group18 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 61px;
+    width: 102px;
+    position: absolute;
+    margin: 0;
+    left: 345px
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .fill19 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 330px;
+    height: 96px;
+    width: 157px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .fill21 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 325px;
+    height: 120px;
+    width: 196px;
+    position: absolute;
+    margin: 0;
+    left: 32px
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .fill23 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 157px;
+    height: 120px;
+    width: 196px;
+    position: absolute;
+    margin: 0;
+    left: 41px
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .fill25 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 439px;
+    height: 120px;
+    width: 196px;
+    position: absolute;
+    margin: 0;
+    left: 41px
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .group29 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 56px;
+    width: 90px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .fill30 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 38px;
+    height: 50px;
+    width: 79px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .fill32 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 515px;
+    height: 64px;
+    width: 105px;
+    position: absolute;
+    margin: 0;
+    left: 165px
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .group36 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 27px;
+    width: 47px;
+    position: absolute;
+    margin: 0;
+    left: 238px
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .fill37 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 311px;
+    height: 68px;
+    width: 108px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .bull-and-bear .page1-copy .group42 .group41 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 27px;
+    width: 47px;
+    position: absolute;
+    margin: 0;
+    left: 419px
+}
+
+.mvp-new .bull-and-bear .bull2 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 218px;
+    height: 399px;
+    width: 684px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .bull-and-bear .bear {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 324px;
+    height: 356px;
+    width: 644px;
+    position: absolute;
+    margin: 0;
+    left: 917px
+}
+
+.mvp-new .bull-and-bear .page11 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 263px;
+    height: 336px;
+    width: 526px;
+    position: absolute;
+    margin: 0;
+    left: 531px
+}
+
+.mvp-new .bull-and-bear .page11 .fill11 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 150px;
+    height: 78px;
+    width: 125px;
+    position: absolute;
+    margin: 0;
+    left: 51px;
+    opacity: .47
+}
+
+.mvp-new .bull-and-bear .page11 .fill3 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 27px;
+    height: 278px;
+    width: 329px;
+    position: absolute;
+    margin: 0;
+    left: 80px;
+    opacity: .47
+}
+
+.mvp-new .bull-and-bear .page11 .group7 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 145px;
+    width: 236px;
+    position: absolute;
+    margin: 0;
+    left: 185px;
+    opacity: .47
+}
+
+.mvp-new .bull-and-bear .page11 .fill8 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 118px;
+    height: 58px;
+    width: 96px;
+    position: absolute;
+    margin: 0;
+    left: 305px;
+    opacity: .47
+}
+
+.mvp-new .bull-and-bear .page11 .fill10 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 170px;
+    height: 59px;
+    width: 96px;
+    position: absolute;
+    margin: 0;
+    left: 224px;
+    opacity: .47
+}
+
+.mvp-new .bull-and-bear .page11 .fill121 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 58px;
+    height: 132px;
+    width: 216px;
+    position: absolute;
+    margin: 0;
+    left: 310px;
+    opacity: .47
+}
+
+.mvp-new .bull-and-bear .page11 .fill141 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 194px;
+    height: 55px;
+    width: 92px;
+    position: absolute;
+    margin: 0;
+    left: 275px;
+    opacity: .47
+}
+
+.mvp-new .bull-and-bear .page11 .fill16 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 252px;
+    height: 84px;
+    width: 139px;
+    position: absolute;
+    margin: 0;
+    left: 100px;
+    opacity: .47
+}
+
+.mvp-new .bull-and-bear .page11 .fill18 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 60px;
+    height: 201px;
+    width: 179px;
+    position: absolute;
+    margin: 0;
+    left: 152px;
+    opacity: .47
+}
+
+.mvp-new .bull-and-bear .page11 .fill20 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 134px;
+    height: 111px;
+    width: 179px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    opacity: .47
+}
+
+.mvp-new .bull-and-bear .page11 .fill251 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 73px;
+    height: 201px;
+    width: 179px;
+    position: absolute;
+    margin: 0;
+    left: 138px
+}
+
+.mvp-new .bull-and-bear .page11 .fill27 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 66px;
+    height: 192px;
+    width: 170px;
+    position: absolute;
+    margin: 0;
+    left: 156px
+}
+
+.mvp-new .bull-and-bear .b-ears {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 296px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 882px;
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 48.0px;
+    color: rgba(208, 1, 27, 1.0);
+    text-align: center;
+    line-height: 48.0px
+}
+
+.mvp-new .bull-and-bear .a900 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 339px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 903px;
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 64.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: center;
+    line-height: 48.0px
+}
+
+.mvp-new .b-ulls {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 446px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 460px;
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 48.0px;
+    color: rgba(126, 210, 33, 1.0);
+    text-align: center;
+    line-height: 48.0px
+}
+
+.mvp-new .a7645 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 495px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 462px;
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 64.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: center;
+    line-height: 48.0px
+}
+
+.mvp-new .t-itle {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 42px;
+    height: 51px;
+    width: 1292px;
+    position: absolute;
+    margin: 0;
+    left: 74px
+}
+
+.mvp-new .t-itle .group8 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 51px;
+    width: 1292px;
+    position: relative;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .t-itle .group8 .the-most-accurate-pr {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: -1px;
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 36.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: center
+}
+
+.mvp-new .t-itle .group8 .n-av {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 51px;
+    width: 185px;
+    position: absolute;
+    margin: 0;
+    left: 1052px
+}
+
+.mvp-new .t-itle .group8 .n-av .ducatur-logo {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 51px;
+    width: 185px;
+    position: relative;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .t-itle .group8 .n-av .ducatur-logo .fill13 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 18px;
+    height: 21px;
+    width: 20px;
+    position: absolute;
+    margin: 0;
+    left: 49px
+}
+
+.mvp-new .t-itle .group8 .n-av .ducatur-logo .fill31 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 18px;
+    height: 21px;
+    width: 20px;
+    position: absolute;
+    margin: 0;
+    left: 70px
+}
+
+.mvp-new .t-itle .group8 .n-av .ducatur-logo .fill51 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 17px;
+    height: 22px;
+    width: 19px;
+    position: absolute;
+    margin: 0;
+    left: 90px
+}
+
+.mvp-new .t-itle .group8 .n-av .ducatur-logo .fill71 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 18px;
+    height: 21px;
+    width: 24px;
+    position: absolute;
+    margin: 0;
+    left: 109px
+}
+
+.mvp-new .t-itle .group8 .n-av .ducatur-logo .fill9 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 18px;
+    height: 21px;
+    width: 17px;
+    position: absolute;
+    margin: 0;
+    left: 127px
+}
+
+.mvp-new .t-itle .group8 .n-av .ducatur-logo .fill111 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 18px;
+    height: 21px;
+    width: 20px;
+    position: absolute;
+    margin: 0;
+    left: 146px
+}
+
+.mvp-new .t-itle .group8 .n-av .ducatur-logo .group15 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 18px;
+    height: 21px;
+    width: 19px;
+    position: absolute;
+    margin: 0;
+    left: 166px
+}
+
+.mvp-new .t-itle .group8 .n-av .ducatur-logo .group181 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 51px;
+    width: 36px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .t-itle .group8 .menu-icon {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 18px;
+    height: 18px;
+    width: 24px;
+    position: absolute;
+    margin: 0;
+    left: 1268px
+}
+
+.mvp-new .beting-line {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 782px;
+    height: 178px;
+    width: 1349px;
+    position: absolute;
+    margin: 0;
+    left: 46px
+}
+
+.mvp-new .beting-line .group5 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 30px;
+    height: 102px;
+    width: 1349px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .beting-line .group5 .line {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 54px;
+    height: 3px;
+    width: 1197px;
+    position: absolute;
+    margin: 0;
+    left: 76px
+}
+
+.mvp-new .beting-line .group5 .line1 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 54px;
+    height: 3px;
+    width: 80px;
+    position: absolute;
+    margin: 0;
+    left: 1269px;
+    opacity: .5
+}
+
+.mvp-new .beting-line .group5 .line2 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 54px;
+    height: 3px;
+    width: 80px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    opacity: .5
+}
+
+.mvp-new .beting-line .group5 .group {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 38px;
+    height: 34px;
+    width: 1210px;
+    position: absolute;
+    margin: 0;
+    left: 69px
+}
+
+.mvp-new .beting-line .group5 .group .path {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 34px;
+    width: 30px;
+    position: absolute;
+    margin: 0;
+    left: 591px
+}
+
+.mvp-new .beting-line .group5 .group .path1 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 7px;
+    height: 21px;
+    width: 19px;
+    position: absolute;
+    margin: 0;
+    left: 748px
+}
+
+.mvp-new .beting-line .group5 .group .path2 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 7px;
+    height: 21px;
+    width: 19px;
+    position: absolute;
+    margin: 0;
+    left: 896px
+}
+
+.mvp-new .beting-line .group5 .group .path3 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 7px;
+    height: 21px;
+    width: 19px;
+    position: absolute;
+    margin: 0;
+    left: 1043px
+}
+
+.mvp-new .beting-line .group5 .group .path4 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 7px;
+    height: 21px;
+    width: 19px;
+    position: absolute;
+    margin: 0;
+    left: 1191px
+}
+
+.mvp-new .beting-line .group5 .group .path5 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 7px;
+    height: 21px;
+    width: 19px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .beting-line .group5 .group .path6 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 7px;
+    height: 21px;
+    width: 19px;
+    position: absolute;
+    margin: 0;
+    left: 148px
+}
+
+.mvp-new .beting-line .group5 .group .path7 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 7px;
+    height: 21px;
+    width: 19px;
+    position: absolute;
+    margin: 0;
+    left: 295px
+}
+
+.mvp-new .beting-line .group5 .group .path8 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 7px;
+    height: 21px;
+    width: 19px;
+    position: absolute;
+    margin: 0;
+    left: 443px
+}
+
+.mvp-new .beting-line .group5 .a6000 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 639px;
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 20.0px;
+    color: rgba(191, 143, 255, 1.0);
+    text-align: center;
+    line-height: 24.0px
+}
+
+.mvp-new .beting-line .group5 .a7000 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 70px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 804px;
+    opacity: .5;
+    font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(72, 198, 31, 1.0);
+    text-align: center;
+    line-height: 16.0px
+}
+
+.mvp-new .beting-line .group5 .a8000 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 70px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 951px;
+    opacity: .5;
+    font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(72, 198, 31, 1.0);
+    text-align: center;
+    line-height: 16.0px
+}
+
+.mvp-new .beting-line .group5 .a9000 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 70px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 1096px;
+    opacity: .5;
+    font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(72, 198, 31, 1.0);
+    text-align: center;
+    line-height: 16.0px
+}
+
+.mvp-new .beting-line .group5 .a10000 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 70px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 1244px;
+    opacity: .5;
+    font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(72, 198, 31, 1.0);
+    text-align: center;
+    line-height: 16.0px
+}
+
+.mvp-new .beting-line .group5 .a70001 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 14px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 55px;
+    opacity: .5;
+    font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(38, 208, 248, 1.0);
+    text-align: center;
+    line-height: 16.0px
+}
+
+.mvp-new .beting-line .group5 .a3000 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 14px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 202px;
+    opacity: .5;
+    font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(38, 208, 248, 1.0);
+    text-align: center;
+    line-height: 16.0px
+}
+
+.mvp-new .beting-line .group5 .a4000 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 14px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 351px;
+    opacity: .5;
+    font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(38, 208, 248, 1.0);
+    text-align: center;
+    line-height: 16.0px
+}
+
+.mvp-new .beting-line .group5 .a5000 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 14px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 497px;
+    opacity: .5;
+    font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(38, 208, 248, 1.0);
+    text-align: center;
+    line-height: 16.0px
+}
+
+.mvp-new .beting-line .group3 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 75px;
+    height: 12px;
+    width: 106px;
+    position: absolute;
+    margin: 0;
+    left: 701px;
+    opacity: .52
+}
+
+.mvp-new .beting-line .group3 .line21 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .beting-line .group3 .line22 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 13px
+}
+
+.mvp-new .beting-line .group3 .line23 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 26px
+}
+
+.mvp-new .beting-line .group3 .line24 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 39px
+}
+
+.mvp-new .beting-line .group3 .line25 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 52px
+}
+
+.mvp-new .beting-line .group3 .line26 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 64px
+}
+
+.mvp-new .beting-line .group3 .line27 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 77px
+}
+
+.mvp-new .beting-line .group3 .line28 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 90px
+}
+
+.mvp-new .beting-line .group3 .line29 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 103px
+}
+
+.mvp-new .beting-line .group31 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 75px;
+    height: 12px;
+    width: 106px;
+    position: absolute;
+    margin: 0;
+    left: 848px;
+    opacity: .52
+}
+
+.mvp-new .beting-line .group31 .line210 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .beting-line .group31 .line211 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 13px
+}
+
+.mvp-new .beting-line .group31 .line212 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 26px
+}
+
+.mvp-new .beting-line .group31 .line213 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 39px
+}
+
+.mvp-new .beting-line .group31 .line214 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 52px
+}
+
+.mvp-new .beting-line .group31 .line215 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 64px
+}
+
+.mvp-new .beting-line .group31 .line216 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 77px
+}
+
+.mvp-new .beting-line .group31 .line217 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 90px
+}
+
+.mvp-new .beting-line .group31 .line218 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 103px
+}
+
+.mvp-new .beting-line .group32 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 75px;
+    height: 12px;
+    width: 106px;
+    position: absolute;
+    margin: 0;
+    left: 996px;
+    opacity: .52
+}
+
+.mvp-new .beting-line .group32 .line219 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .beting-line .group32 .line220 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 13px
+}
+
+.mvp-new .beting-line .group32 .line221 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 26px
+}
+
+.mvp-new .beting-line .group32 .line222 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 39px
+}
+
+.mvp-new .beting-line .group32 .line223 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 52px
+}
+
+.mvp-new .beting-line .group32 .line224 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 64px
+}
+
+.mvp-new .beting-line .group32 .line225 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 77px
+}
+
+.mvp-new .beting-line .group32 .line226 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 90px
+}
+
+.mvp-new .beting-line .group32 .line227 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 103px
+}
+
+.mvp-new .beting-line .part {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 75px;
+    height: 12px;
+    width: 106px;
+    position: absolute;
+    margin: 0;
+    left: 1143px;
+    opacity: .52
+}
+
+.mvp-new .beting-line .part .line228 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .beting-line .part .line229 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 13px
+}
+
+.mvp-new .beting-line .part .line230 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 26px
+}
+
+.mvp-new .beting-line .part .line231 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 39px
+}
+
+.mvp-new .beting-line .part .line232 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 52px
+}
+
+.mvp-new .beting-line .part .line233 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 64px
+}
+
+.mvp-new .beting-line .part .line234 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 77px
+}
+
+.mvp-new .beting-line .part .line235 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 90px
+}
+
+.mvp-new .beting-line .part .line236 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 103px
+}
+
+.mvp-new .beting-line .part1 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 85px;
+    height: 12px;
+    width: 106px;
+    position: absolute;
+    margin: 0;
+    left: 99px;
+    opacity: .52
+}
+
+.mvp-new .beting-line .part1 .line237 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .beting-line .part1 .line238 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 13px
+}
+
+.mvp-new .beting-line .part1 .line239 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 26px
+}
+
+.mvp-new .beting-line .part1 .line240 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 39px
+}
+
+.mvp-new .beting-line .part1 .line241 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 52px
+}
+
+.mvp-new .beting-line .part1 .line242 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 64px
+}
+
+.mvp-new .beting-line .part1 .line243 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 77px
+}
+
+.mvp-new .beting-line .part1 .line244 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 90px
+}
+
+.mvp-new .beting-line .part1 .line245 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 103px
+}
+
+.mvp-new .beting-line .part2 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 85px;
+    height: 12px;
+    width: 106px;
+    position: absolute;
+    margin: 0;
+    left: 246px;
+    opacity: .52
+}
+
+.mvp-new .beting-line .part2 .line246 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .beting-line .part2 .line247 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 13px
+}
+
+.mvp-new .beting-line .part2 .line248 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 26px
+}
+
+.mvp-new .beting-line .part2 .line249 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 39px
+}
+
+.mvp-new .beting-line .part2 .line250 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 52px
+}
+
+.mvp-new .beting-line .part2 .line251 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 64px
+}
+
+.mvp-new .beting-line .part2 .line252 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 77px
+}
+
+.mvp-new .beting-line .part2 .line253 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 90px
+}
+
+.mvp-new .beting-line .part2 .line254 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 103px
+}
+
+.mvp-new .beting-line .part3 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 85px;
+    height: 12px;
+    width: 106px;
+    position: absolute;
+    margin: 0;
+    left: 394px;
+    opacity: .52
+}
+
+.mvp-new .beting-line .part3 .line255 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .beting-line .part3 .line256 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 13px
+}
+
+.mvp-new .beting-line .part3 .line257 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 26px
+}
+
+.mvp-new .beting-line .part3 .line258 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 39px
+}
+
+.mvp-new .beting-line .part3 .line259 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 52px
+}
+
+.mvp-new .beting-line .part3 .line260 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 64px
+}
+
+.mvp-new .beting-line .part3 .line261 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 77px
+}
+
+.mvp-new .beting-line .part3 .line262 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 90px
+}
+
+.mvp-new .beting-line .part3 .line263 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 103px
+}
+
+.mvp-new .beting-line .part4 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 85px;
+    height: 12px;
+    width: 106px;
+    position: absolute;
+    margin: 0;
+    left: 541px;
+    opacity: .52
+}
+
+.mvp-new .beting-line .part4 .line264 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .beting-line .part4 .line265 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 13px
+}
+
+.mvp-new .beting-line .part4 .line266 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 26px
+}
+
+.mvp-new .beting-line .part4 .line267 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 39px
+}
+
+.mvp-new .beting-line .part4 .line268 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 52px
+}
+
+.mvp-new .beting-line .part4 .line269 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 64px
+}
+
+.mvp-new .beting-line .part4 .line270 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 77px
+}
+
+.mvp-new .beting-line .part4 .line271 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 90px
+}
+
+.mvp-new .beting-line .part4 .line272 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 12px;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    left: 103px
+}
+
+.mvp-new .beting-line .r-ed {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 87px;
+    height: 20px;
+    width: 234px;
+    position: absolute;
+    margin: 0;
+    left: 423px
+}
+
+.mvp-new .beting-line .r-ed .rectangle2 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 5px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 185px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle21 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 185px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle22 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 5px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 160px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle23 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 160px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle24 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 173px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle25 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 5px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 198px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle26 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 198px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle27 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 224px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle28 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 134px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle29 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 109px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle210 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 122px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle211 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 147px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle212 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 5px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 109px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle213 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 5px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 122px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle214 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 10px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 122px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle215 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 15px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 122px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle216 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 5px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 147px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle217 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 15px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 198px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle218 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 10px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 198px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle219 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 5px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle220 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle221 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 5px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle222 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle223 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 13px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle224 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 5px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 38px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle225 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 38px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle226 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 64px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle227 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 15px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 38px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .r-ed .rectangle228 {
+    background-color: rgba(215, 31, 31, 0.78);
+    top: 10px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 38px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(215, 31, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 44px;
+    height: 40px;
+    width: 504px;
+    position: absolute;
+    margin: 0;
+    left: 691px
+}
+
+.mvp-new .beting-line .g-reen .rectangle229 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle230 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 30px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle231 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 39px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle232 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 30px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 39px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle233 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 160px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle234 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 30px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 160px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle235 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 173px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle236 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 30px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 173px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle237 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 25px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 173px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle238 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 20px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 173px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle239 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 347px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle240 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 30px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 347px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle241 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 25px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 347px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle242 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 20px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 347px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle243 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 359px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle244 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 30px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 359px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle245 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 334px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle246 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 372px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle247 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 30px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 372px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle248 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 25px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 372px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle249 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 20px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 372px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle250 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 15px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 372px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle251 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 10px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 372px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle252 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 442px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle253 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 30px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 442px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle254 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 25px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 442px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle255 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 20px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 442px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle256 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 15px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 442px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle257 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 10px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 442px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle258 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 5px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 442px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle259 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 0;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 442px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle260 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 468px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle261 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 30px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 468px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle262 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 25px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 468px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle263 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 481px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle264 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 30px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 481px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle265 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 455px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle266 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 494px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle267 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 30px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 494px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle268 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 25px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 494px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle269 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 20px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 494px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle270 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 15px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 494px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle271 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 10px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 494px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle272 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 25px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 39px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle273 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 20px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 39px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .g-reen .rectangle274 {
+    background-color: rgba(76, 215, 31, 0.78);
+    top: 35px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    margin: 0;
+    left: 13px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(76, 215, 31, 0.61)
+}
+
+.mvp-new .beting-line .selectinfo {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 122px;
+    height: 56px;
+    width: 133px;
+    position: absolute;
+    margin: 0;
+    left: 532px
+}
+
+.mvp-new .beting-line .selectinfo .rectangle {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 48px;
+    width: 133px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    opacity: .9
+}
+
+.mvp-new .beting-line .selectinfo .shape {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 12px;
+    height: 12px;
+    width: 14px;
+    position: absolute;
+    margin: 0;
+    left: 9px
+}
+
+.mvp-new .beting-line .selectinfo .crypto-insider {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 12px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 25px;
+    font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+    font-size: 10.0px;
+    color: rgba(146, 191, 255, 1.0);
+    text-align: center;
+    letter-spacing: .12px;
+    line-height: 12.0px
+}
+
+.mvp-new .beting-line .selectinfo .its-be5100-i-think {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 28px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 11px;
+    font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+    font-size: 12.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: center;
+    letter-spacing: .14px;
+    line-height: 14.0px
+}
+
+.mvp-new .beting-line .select-info-copy {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 52px;
+    width: 217px;
+    position: absolute;
+    margin: 0;
+    left: 848px
+}
+
+.mvp-new .beting-line .select-info-copy .rectangle1 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 48px;
+    width: 217px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    opacity: .9
+}
+
+.mvp-new .beting-line .select-info-copy .shape1 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 6px;
+    height: 12px;
+    width: 14px;
+    position: absolute;
+    margin: 0;
+    left: 9px
+}
+
+.mvp-new .beting-line .select-info-copy .satoshi-nakomoto {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 6px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 26px;
+    font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+    font-size: 10.0px;
+    color: rgba(146, 191, 255, 1.0);
+    text-align: left;
+    letter-spacing: .12px;
+    line-height: 12.0px
+}
+
+.mvp-new .beting-line .select-info-copy .i-know-insiders-info {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 22px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 10px;
+    font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+    font-size: 12.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: center;
+    letter-spacing: .14px;
+    line-height: 14.0px
+}
+
+.mvp-new .group2 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 132px;
+    height: 89px;
+    width: 438px;
+    position: absolute;
+    margin: 0;
+    left: 499px
+}
+
+.mvp-new .group2 .group6 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 89px;
+    width: 438px;
+    position: relative;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .group2 .group6 .win-copy {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 11px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 64.0px;
+    color: rgba(0, 0, 0, 1.0);
+    text-align: left
+}
+
+.mvp-new .group2 .group6 .a153-btc-copy {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 10px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 170px;
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 64.0px;
+    color: rgba(0, 0, 0, 1.0);
+    text-align: left
+}
+
+.mvp-new .group2 .group6 .w-in {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 1px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 4px;
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 64.0px;
+    color: rgba(175, 132, 255, 1.0);
+    text-align: left
+}
+
+.mvp-new .group2 .group6 .a153-btc {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 174px;
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 64.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: left
+}
+
+.mvp-new .button {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 627px;
+    height: 76px;
+    width: 312px;
+    position: absolute;
+    margin: 0;
+    left: 564px
+}
+
+.mvp-new .button .b-t-noutline {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 76px;
+    width: 312px;
+    position: absolute;
+    margin: 0;
+    left: 0
+}
+
+.mvp-new .button .make-prediction {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 24px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 35px;
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 24.0px;
+    color: rgba(248, 251, 255, 1.0);
+    text-align: center
+}
+
+.anima-animate-appear {
+    opacity: 0;
+    display: block;
+    -webkit-animation: anima-reveal .3s ease-in-out 1 normal forwards;
+    -moz-animation: anima-reveal .3s ease-in 1 normal forwards;
+    -o-animation: anima-reveal .3s ease-in-out 1 normal forwards;
+    animation: anima-reveal .3s ease-in-out 1 normal forwards
+}
+
+.anima-animate-disappear {
+    opacity: 1;
+    display: block;
+    -webkit-animation: anima-reveal .3s ease-in-out 1 reverse forwards;
+    -moz-animation: anima-reveal .3s ease-in 1 normal forwards;
+    -o-animation: anima-reveal .3s ease-in-out 1 reverse forwards;
+    animation: anima-reveal .3s ease-in-out 1 reverse forwards
+}
+
+.anima-animate-nodelay {
+    -webkit-animation-delay: 0;
+    -moz-animation-delay: 0;
+    -o-animation-delay: 0;
+    animation-delay: 0
+}
+
+@-webkit-keyframes anima-reveal {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes anima-reveal {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-o-keyframes anima-reveal {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes anima-reveal {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}

@@ -16,7 +16,8 @@ body {
     position: relative;
     overflow: hidden;
     margin: 0;
-    background-color: rgba(255, 255, 255, 1.0)
+    /* background-color: rgba(255, 255, 255, 1.0) */
+    background-color: #1d1f35;
 }
 
 a {
@@ -25,6 +26,13 @@ a {
 
 div {
     -webkit-text-size-adjust: none
+}
+
+.mvp-new .main {
+    width: 1440px;
+    height: 100%;
+    position:relative; 
+    margin:auto;
 }
 
 .mvp-new .b-g {
@@ -441,7 +449,7 @@ div {
     left: 156px
 }
 
-.mvp-new .bull-and-bear .b-ears {
+.mvp-new .b-ears {
     background-color: rgba(255, 255, 255, 0.0);
     top: 296px;
     height: auto;
@@ -456,7 +464,7 @@ div {
     line-height: 48.0px
 }
 
-.mvp-new .bull-and-bear .a900 {
+.mvp-new .a900 {
     background-color: rgba(255, 255, 255, 0.0);
     top: 339px;
     height: auto;

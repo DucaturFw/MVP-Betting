@@ -1,3 +1,5 @@
-import './styles/base.css'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-console.log('app');
+ReactDOM.render(<App />, document.getElementById('root'));

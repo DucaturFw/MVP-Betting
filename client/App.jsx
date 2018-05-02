@@ -12,18 +12,23 @@ import Prediction from './components/prediction';
 import Range from './components/range';
 
 import Predict from './components/predict';
+import List from './components/list';
 
 export default class App extends Component {
   constructor(opts) {
     super(opts);
 
     this.state = {
-      showBet: false
+      showBet: false,
+      showList: true
     };
   }
 
   onMenuClick = () => {
-    console.log('show list');
+    this.setState(state => ({
+      ...state,
+      showList: !state.showList
+    }));
   };
 
   onPredictionClick = () => {
@@ -41,6 +46,7 @@ export default class App extends Component {
         <Prediction onPredictClick={this.onPredictionClick} />
         <Range />
         {this.state.showBet && <Predict onClose={this.onPredictionClick} />}
+        {this.state.showList && <List onClose={this.onMenuClick} />}
       </Main>
     );
   }

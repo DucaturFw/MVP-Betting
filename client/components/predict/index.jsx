@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
+import Popup from './../elements/popup';
+
 export default class Predict extends Component {
   constructor(opts) {
     super(opts);

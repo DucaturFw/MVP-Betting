@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
-export default function({}) {
+export default function({ onPredictClick }) {
   return (
     <div>
       <div className="group2">
@@ -11,10 +12,23 @@ export default function({}) {
           <div className="a153-btc">153 BTC</div>
         </div>
       </div>
-      <div className="button">
-        <img className="b-t-noutline" src="./images/mvp  newbtnoutline.png" />
-        <div className="make-prediction">MAKE PREDICTION</div>
-      </div>
+      <Btn className="button btn-prediction" onClick={onPredictClick}>
+        MAKE PREDICTION
+      </Btn>
     </div>
   );
 }
+
+const Btn = styled.div`
+  box-sizing: border-box;
+  background-image: url('./images/mvp  newbtnoutline.png');
+
+  font-family: 'San Francisco', Helvetica, Arial, serif;
+  font-size: 24px;
+  color: white;
+
+  text-align: center;
+  padding-top: 23px;
+
+  cursor: pointer;
+`;

@@ -18,11 +18,15 @@ export default class App extends Component {
     super(opts);
 
     this.state = {
-      showBet: true
+      showBet: false
     };
   }
 
   onMenuClick = () => {
+    console.log('show list');
+  };
+
+  onPredictionClick = () => {
     this.setState(state => ({
       ...state,
       showBet: !state.showBet
@@ -30,14 +34,13 @@ export default class App extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <Main>
         <Header onMenuClick={this.onMenuClick} />
         <Counters />
-        <Prediction />
+        <Prediction onPredictClick={this.onPredictionClick} />
         <Range />
-        {this.state.showBet && <Predict onClose={this.onMenuClick} />}
+        {this.state.showBet && <Predict onClose={this.onPredictionClick} />}
       </Main>
     );
   }

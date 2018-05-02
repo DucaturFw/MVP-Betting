@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default function({}) {
+export default function({ onMenuClick }) {
   return (
     <div className="t-itle">
       <div className="group8">
@@ -17,7 +17,7 @@ export default function({}) {
             <img className="group181" src="./images/mvp  new group 18  1.png" />
           </div>
         </div>
-        <img className="menu-icon" src="./images/mvp  newmenu icon.png" />
+        <img onClick={onMenuClick} className="menu-icon" src="./images/mvp  newmenu icon.png" />
       </div>
     </div>
   );

@@ -33,6 +33,7 @@ div {
     height: 100%;
     position:relative; 
     margin:auto;
+    box-shadow: 0px 0px 15px 20px rgba(0,0,0,0.15);
 }
 
 .mvp-new .b-g {
@@ -650,7 +651,8 @@ div {
     width: 24px;
     position: absolute;
     margin: 0;
-    left: 1268px
+    left: 1268px;
+    cursor: pointer;
 }
 
 .mvp-new .beting-line {

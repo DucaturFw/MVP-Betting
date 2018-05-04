@@ -14,6 +14,9 @@ import Range from './components/range';
 import Predict from './components/predict';
 import List from './components/list';
 
+import wallet from './models/wallet';
+wallet.init();
+
 export default class App extends Component {
   constructor(opts) {
     super(opts);

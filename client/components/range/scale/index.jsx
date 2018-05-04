@@ -1,9 +1,27 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
+import Lines from './lines';
 
 export default function({}) {
   return (
-    <div>
-      <div className="group5">
+    <Wrap>
+      <StyledLines />
+    </Wrap>
+  );
+}
+
+const Wrap = styled.div`
+  position: relative;
+`;
+
+const StyledLines = styled(Lines)`
+  top: 80px;
+`;
+
+/**
+ *       
+ * <div className="group5">
         <img className="line" src="./images/mvp  newline.png" />
         <img className="line1" src="./images/mvp  newline  1.png" />
         <img className="line2" src="./images/mvp  newline  1.png" />
@@ -195,6 +213,4 @@ export default function({}) {
         <div className="rectangle273" />
         <div className="rectangle274" />
       </div>
-    </div>
-  );
-}
+ */

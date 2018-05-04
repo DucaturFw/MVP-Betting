@@ -62,6 +62,13 @@ process.env.NODE_PATH = (process.env.NODE_PATH || '')
 // injected into the application via DefinePlugin in Webpack configuration.
 const REACT_APP = /^REACT_APP_/i;
 
+function getConfigParams() {
+  return Object.keys(params).reduce((res, key, item) => {
+    res[key] = JSON.stringify(params[key]);
+    return res;
+  }, {});
+}
+
 function getClientEnvironment(publicUrl) {
   const raw = Object.keys(process.env)
     .filter(key => REACT_APP.test(key))
@@ -87,7 +94,7 @@ function getClientEnvironment(publicUrl) {
       env[key] = JSON.stringify(raw[key]);
       return env;
     }, {}),
-    contractAddress: JSON.stringify(params.contractAddress),
+    ...getConfigParams(),
   };
 
   return { raw, stringified };

@@ -23,6 +23,7 @@ export default class Scale extends Component {
       for (let i = 0; i <= 8; i++) {
         results.push(
           <Delimeter
+            key={`${j}${i}`}
             src="./images/mvp  newline 2  35.png"
             style={{ left: START_POINT + STEP * i + RANGE * j, top: j < 4 ? 10 : 0 }}
           />

@@ -2,7 +2,9 @@ import Web3 from 'web3';
 const abi = require('./abi.json');
 
 let localWeb3,
-  contractInstance;
+  contractInstance,
+  userAccount,
+  accountInterval;
 
 let stat,
   currRate,
@@ -15,12 +17,29 @@ export default {
     }
 
     contractInstance = new localWeb3.eth.Contract(abi, contractAddress);
-    console.log(contractInstance.methods);
+    this.updateAccount();
+    // accountInterval = setInterval(this.updateAccount.bind(this), 100);
 
+    console.log("Contract methods: ", contractInstance.methods);
+
+    this.getData();
+  },
+
+  updateAccount: function () {
+    if (web3.eth.defaultAccount !== userAccount) {
+      userAccount = web3.eth.defaultAccount;
+
+      // this.getData();
+    }
+  },
+
+  getData: function () {
     Promise.all([
       this.getStat(),
       this.getCurrRate()
     ]).then(() => {
+      console.log('stat', stat);
+      console.log('rate', currRate);
       // console.log(stat, parseInt(stat[0]));
       // TODO: find right key
       return this.getBettingByID(0);
@@ -29,9 +48,11 @@ export default {
 
       return this.getTokenByID(2);
     }).then(res => {
-      console.log(res);
+      console.log(res, userAccount);
 
-      return this.getUserTokens(1);
+      return this.getUserTokens(userAccount, 10);
+    }).then(res => {
+      console.log('user tokens', res);
     })
   },
 
@@ -58,8 +79,8 @@ export default {
     return contractInstance.methods.getTokenByID(id).call();
   },
 
-  getUserTokens: function (id) {
-    return contractInstance.methods.getUserTokens(localWeb3.eth.defaultAccount, id).call();
+  getUserTokens: function (user, id) {
+    return contractInstance.methods.getUserTokens(user, id).call();
   },
 
   redeemToken: function (id) {

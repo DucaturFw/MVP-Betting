@@ -8,6 +8,8 @@ let localWeb3,
 
 let stat,
   currRate,
+  total,
+  tokens,
   betting;
 
 export default {
@@ -20,7 +22,7 @@ export default {
     this.updateAccount();
     // accountInterval = setInterval(this.updateAccount.bind(this), 100);
 
-    console.log("Contract methods: ", contractInstance.methods);
+    // console.log("Contract methods: ", contractInstance.methods);
 
     return this.getData();
   },
@@ -36,23 +38,19 @@ export default {
   getData: function () {
     return Promise.all([
       this.getStat(),
-      this.getCurrRate()
-    ]).then(() => {
-      // console.log('stat', stat);
-      // console.log('rate', currRate);
+      this.getCurrRate(),
+      this.totalSupply()
+    ])
+    .then(() => this.getBettingByID(stat.listPlaying))
+    .then(() => {
+      let promises = [];
 
-      return this.getBettingByID(stat.listPlaying);
-    }).then(() => {
-      console.log(betting);
+      for (let i = betting.startTokenId; i < total; i++)
+        promises.push(this.getTokenByID(i))
 
-      return this.getTokenByID(2);
-    }).then(res => {
-      console.log(res, userAccount);
-
-      return this.getUserTokens(userAccount, 0);
-    }).then(res => {
-      console.log('user tokens', res);
+      return Promise.all(promises);
     })
+    .then(res => tokens = res);
   },
 
   getStat: function () {
@@ -64,6 +62,12 @@ export default {
   getCurrRate: function () {
     return contractInstance.methods.curRate().call().then(result => {
       currRate = result;
+    })
+  },
+
+  totalSupply: function () {
+    return contractInstance.methods.totalSupply().call().then(result => {
+      total = result;
     })
   },
 

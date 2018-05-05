@@ -27,8 +27,7 @@ export default {
 
   updateAccount: function () {
     if (web3.eth.defaultAccount !== userAccount) {
-      // userAccount = web3.eth.defaultAccount;
-      userAccount = '0x560e36b2d58f7e71499f58f5c9269B5A3989Be4C';
+      userAccount = web3.eth.defaultAccount;
 
       return this.getData();
     }

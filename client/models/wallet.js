@@ -50,7 +50,12 @@ export default {
 
       return Promise.all(promises);
     })
-    .then(res => tokens = res);
+    .then(res => tokens = res)
+    .then(() => ({
+      tokens,
+      currRate,
+      betting,
+    }));
   },
 
   getStat: function () {
@@ -99,6 +104,10 @@ export default {
 
   getTokens: function () {
     return tokens;
+  },
+
+  fromWei: function(amount) {
+    return localWeb3.utils.fromWei(amount);
   },
 
   createBet: function ({ bet, price, amount }) {

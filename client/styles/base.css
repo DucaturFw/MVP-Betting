@@ -2917,7 +2917,7 @@ div {
     background-color: rgba(255, 255, 255, 0.0);
     top: 10px;
     height: auto;
-    width: auto;
+    width: 300px;
     position: absolute;
     margin: 0;
     left: 170px;
@@ -2945,7 +2945,7 @@ div {
     background-color: rgba(255, 255, 255, 0.0);
     top: 0;
     height: auto;
-    width: auto;
+    width: 300px;
     position: absolute;
     margin: 0;
     left: 174px;

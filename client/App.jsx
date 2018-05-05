@@ -24,13 +24,14 @@ export default class App extends Component {
       showBet: false,
       showList: false,
       loading: true,
+      data: {}
     };
   }
 
   componentDidMount() {
-    wallet.init().then(() => {
-      this.setState({ loading: false })
-    })
+    wallet.init().then(data => {
+      this.setState({ loading: false, data });
+    });
   }
 
   onMenuClick = () => {
@@ -48,14 +49,16 @@ export default class App extends Component {
   };
 
   render() {
+    // console.log(this.state);
+
     if (this.state.loading) {
-      return <Main>Loading...</Main>
+      return <Main>Loading...</Main>;
     }
 
     return (
       <Main>
         <Header onMenuClick={this.onMenuClick} />
-        <Counters />
+        <Counters tokens={this.state.data.tokens} />
         <Prediction onPredictClick={this.onPredictionClick} />
         <Range />
         {this.state.showBet && <Predict onClose={this.onPredictionClick} />}

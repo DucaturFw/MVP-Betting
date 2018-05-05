@@ -4,13 +4,13 @@ import { format } from 'date-fns';
 
 const FORMAT = 'D MMMM YYYY';
 
-export default function ({ bets }) {
+export default function({ bets }) {
   const items = bets.map((bet, idx) => {
     return (
       <RowTable key={idx}>
         <Col1>1 Bitcoin = ${bet.price}</Col1>
         <Col2>{format(bet.date, FORMAT)}</Col2>
-        <Col3>{bet.bet} ETHv</Col3>
+        <Col3>{bet.bet} ETH</Col3>
         <Col4>{bet.result}</Col4>
         <Col5>Status</Col5>
       </RowTable>

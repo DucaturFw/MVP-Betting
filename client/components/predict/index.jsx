@@ -5,9 +5,7 @@ import styled from 'styled-components';
 import Popup from './../elements/popup';
 
 import Wallet from './../../models/wallet';
-
-const BET_MORE = 1;
-const BET_LESS = 0;
+import { BET_LESS, BET_MORE } from './../../models/consts';
 
 export default class Predict extends Component {
   constructor(opts) {
@@ -21,7 +19,7 @@ export default class Predict extends Component {
       less: 0,
       text: '',
       available: false,
-      loading: false,
+      loading: false
     };
   }
 
@@ -29,10 +27,13 @@ export default class Predict extends Component {
     this.node = ReactDOM.findDOMNode(this);
     window.addEventListener('click', this.onClose, false);
 
-    this.setState(state => ({
-      ...state,
-      ...Wallet.getRange(),
-    }), this.setParams);
+    this.setState(
+      state => ({
+        ...state,
+        ...Wallet.getRange()
+      }),
+      this.setParams
+    );
   }
 
   componentWillUnmount() {
@@ -45,21 +46,18 @@ export default class Predict extends Component {
   }
 
   getText({ more, less, bet }) {
-    return bet === BET_MORE
-      ? `Price must be more than ${more}`
-      : `Price must be less than ${less}`;
+    return bet === BET_MORE ? `Price must be more than ${more}` : `Price must be less than ${less}`;
   }
 
   setAvailble = () => {
     const { bet, price, more, less } = this.state;
-    const available = bet === BET_MORE
-      ? price > more
-      : price < less;
+    const available = bet === BET_MORE ? price > more : price < less;
 
     this.setState(state => ({
-      ...state, available
+      ...state,
+      available
     }));
-  }
+  };
 
   onClose = e => {
     if (!e.target.classList.contains('btn-prediction') && !this.node.contains(e.target)) {
@@ -81,9 +79,11 @@ export default class Predict extends Component {
 
   render() {
     if (this.state.loading) {
-      return <Wrapper>
-        <Text>Loading...</Text>
-      </Wrapper>;
+      return (
+        <Wrapper>
+          <Text>Loading...</Text>
+        </Wrapper>
+      );
     }
 
     return (
@@ -102,11 +102,7 @@ export default class Predict extends Component {
             <Input name="price" value={this.state.price} onChange={this.handleInput} />
             <Dollor>$</Dollor>
           </Item>
-          {!this.state.available && (
-            <Text>
-              {this.state.text}
-            </Text>
-          )}
+          {!this.state.available && <Text>{this.state.text}</Text>}
           <Item>
             <Label>Your bet in ETH</Label>
             <Input name="amount" value={this.state.amount} onChange={this.handleInput} />

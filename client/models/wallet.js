@@ -19,7 +19,7 @@ export default {
     }
 
     contractInstance = new localWeb3.eth.Contract(abi, contractAddress);
-    // console.log("Contract methods: ", contractInstance.methods);
+    console.log("Contract methods: ", contractInstance.methods);
     
     // accountInterval = setInterval(this.updateAccount.bind(this), 100);
     return this.updateAccount();
@@ -27,7 +27,8 @@ export default {
 
   updateAccount: function () {
     if (web3.eth.defaultAccount !== userAccount) {
-      userAccount = web3.eth.defaultAccount;
+      // userAccount = web3.eth.defaultAccount;
+      userAccount = '0x560e36b2d58f7e71499f58f5c9269B5A3989Be4C';
 
       return this.getData();
     }
@@ -50,7 +51,14 @@ export default {
 
       return Promise.all(promises);
     })
-    .then(res => tokens = res)
+    .then(res => {
+      tokens = res.map((token, idx) => ({
+        ...token,
+        id: idx
+      }))
+
+      return tokens;
+    })
     .then(() => ({
       tokens,
       currRate,
@@ -92,7 +100,14 @@ export default {
   },
 
   redeemToken: function (id) {
-    return contractInstance.methods.redeemToken(id).call();
+    return new Promise((res, rej) => {
+      contractInstance.methods.redeemToken(id)
+        .send({
+          from: userAccount,
+        })
+        .on("receipt", receipt => res(receipt))
+        .on("error", error => rej(error));
+    })
   },
 
   getRange: function () {
@@ -104,6 +119,10 @@ export default {
 
   getTokens: function () {
     return tokens;
+  },
+
+  getUserAccount: function () {
+    return userAccount;
   },
 
   fromWei: function(amount) {

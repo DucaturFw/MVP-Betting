@@ -4,25 +4,15 @@ import styled from 'styled-components';
 
 import Items from './items';
 
+import Wallet from './../../models/wallet';
+import { BET_LESS, BET_MORE } from './../../models/consts';
+
 export default class Predict extends Component {
   constructor(opts) {
     super(opts);
 
     this.state = {
-      bets: [
-        {
-          price: 10400,
-          date: Date.now(),
-          bet: 1.121,
-          result: 'active'
-        },
-        {
-          price: 9000,
-          date: Date.now(),
-          bet: 2,
-          result: 'active'
-        }
-      ]
+      bets: []
     };
   }
 
@@ -42,12 +32,21 @@ export default class Predict extends Component {
     }
   };
 
+  get myTokens() {
+    const { tokens } = this.props;
+    const userAccount = Wallet.getUserAccount();
+
+    return tokens.filter(token => {
+      return token.ownerToken == userAccount;
+    });
+  }
+
   render() {
     return (
       <Wrapper>
         <Title>Your Bids List</Title>
         <Container>
-          <Items bets={this.state.bets} />
+          <Items bets={this.myTokens} />
         </Container>
       </Wrapper>
     );

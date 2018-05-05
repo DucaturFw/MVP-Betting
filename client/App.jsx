@@ -15,7 +15,6 @@ import Predict from './components/predict';
 import List from './components/list';
 
 import wallet from './models/wallet';
-wallet.init();
 
 export default class App extends Component {
   constructor(opts) {
@@ -23,8 +22,15 @@ export default class App extends Component {
 
     this.state = {
       showBet: false,
-      showList: true
+      showList: false,
+      loading: true,
     };
+  }
+
+  componentDidMount() {
+    wallet.init().then(() => {
+      this.setState({ loading: false })
+    })
   }
 
   onMenuClick = () => {
@@ -42,6 +48,10 @@ export default class App extends Component {
   };
 
   render() {
+    if (this.state.loading) {
+      return <Main>Loading...</Main>
+    }
+
     return (
       <Main>
         <Header onMenuClick={this.onMenuClick} />

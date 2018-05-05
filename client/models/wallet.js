@@ -22,7 +22,7 @@ export default {
 
     console.log("Contract methods: ", contractInstance.methods);
 
-    this.getData();
+    return this.getData();
   },
 
   updateAccount: function () {
@@ -34,15 +34,14 @@ export default {
   },
 
   getData: function () {
-    Promise.all([
+    return Promise.all([
       this.getStat(),
       this.getCurrRate()
     ]).then(() => {
-      console.log('stat', stat);
-      console.log('rate', currRate);
-      // console.log(stat, parseInt(stat[0]));
-      // TODO: find right key
-      return this.getBettingByID(0);
+      // console.log('stat', stat);
+      // console.log('rate', currRate);
+
+      return this.getBettingByID(stat.listPlaying);
     }).then(() => {
       console.log(betting);
 
@@ -50,7 +49,7 @@ export default {
     }).then(res => {
       console.log(res, userAccount);
 
-      return this.getUserTokens(userAccount, 10);
+      return this.getUserTokens(userAccount, 0);
     }).then(res => {
       console.log('user tokens', res);
     })
@@ -84,6 +83,26 @@ export default {
   },
 
   redeemToken: function (id) {
-    return contractInstance.methods.function(id).call();
+    return contractInstance.methods.redeemToken(id).call();
   },
+
+  getRange: function () {
+    return {
+      more: currRate * 1.05,
+      less: currRate * 0.95
+    }
+  },
+
+  createBet: function ({ bet, price, amount }) {
+    // console.log('state', localWeb3.utils.toWei(amount, 'ether'));
+    return new Promise((res, rej) => {
+      contractInstance.methods.buyToken(stat.listPlaying, price, bet)
+        .send({
+          from: userAccount,
+          value: localWeb3.utils.toWei(amount.toString(), 'ether')
+        })
+        .on("receipt", receipt => res(receipt))
+        .on("error", error => rej(error));
+    })
+  }
 }

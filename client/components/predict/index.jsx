@@ -4,25 +4,61 @@ import styled from 'styled-components';
 
 import Popup from './../elements/popup';
 
+import Wallet from './../../models/wallet';
+
+const BET_MORE = 1;
+const BET_LESS = 0;
+
 export default class Predict extends Component {
   constructor(opts) {
     super(opts);
 
     this.state = {
-      bet: 1,
+      bet: BET_MORE,
       price: 10000,
-      amount: 1
+      amount: 1,
+      more: 0,
+      less: 0,
+      text: '',
+      available: false,
+      loading: false,
     };
   }
 
   componentDidMount() {
     this.node = ReactDOM.findDOMNode(this);
     window.addEventListener('click', this.onClose, false);
+
+    this.setState(state => ({
+      ...state,
+      ...Wallet.getRange(),
+    }), this.setParams);
   }
 
   componentWillUnmount() {
     window.removeEventListener('click', this.onClose, false);
     this.node = null;
+  }
+
+  setParams() {
+    this.setState(state => ({ text: this.getText(state) }), this.setAvailble);
+  }
+
+  getText({ more, less, bet }) {
+    return bet === BET_MORE
+      ? `Price must be more than ${more}`
+      : `Price must be less than ${less}`;
+  }
+
+  setAvailble = () => {
+    const { bet, price, more, less } = this.state;
+    const available = bet === BET_MORE
+      ? price > more
+      : price < less;
+
+    this.setState(state => ({
+      ...state, available
+    }));
   }
 
   onClose = e => {
@@ -32,14 +68,24 @@ export default class Predict extends Component {
   };
 
   handleInput = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value }, this.setParams);
   };
 
   handlePredict = () => {
-    console.log(this.state);
+    this.setState({ loading: true });
+
+    Wallet.createBet(this.state)
+      .then(() => this.setState({ loading: false }))
+      .catch(() => this.setState({ loading: false }));
   };
 
   render() {
+    if (this.state.loading) {
+      return <Wrapper>
+        <Text>Loading...</Text>
+      </Wrapper>;
+    }
+
     return (
       <Wrapper>
         <Title>Your prediction for Bitcoin</Title>
@@ -47,8 +93,8 @@ export default class Predict extends Component {
           <Item>
             <Label>Condition</Label>
             <InputSelect name="bet" onChange={this.handleInput} value={this.state.bet}>
-              <option value="1">Price will be Higher than</option>
-              <option value="2">Price will be Lower than</option>
+              <option value={BET_MORE}>Price will be Higher than</option>
+              <option value={BET_LESS}>Price will be Lower than</option>
             </InputSelect>
           </Item>
           <Item>
@@ -56,15 +102,22 @@ export default class Predict extends Component {
             <Input name="price" value={this.state.price} onChange={this.handleInput} />
             <Dollor>$</Dollor>
           </Item>
+          {!this.state.available && (
+            <Text>
+              {this.state.text}
+            </Text>
+          )}
           <Item>
             <Label>Your bet in ETH</Label>
             <Input name="amount" value={this.state.amount} onChange={this.handleInput} />
           </Item>
 
-          <Btn onClick={this.handlePredict}>
-            <img className="b-t-noutline" src="./images/btn.png" />
-            <BtnLabel>Make Prediction</BtnLabel>
-          </Btn>
+          {this.state.available && (
+            <Btn onClick={this.handlePredict}>
+              <img className="b-t-noutline" src="./images/btn.png" />
+              <BtnLabel>Make Prediction</BtnLabel>
+            </Btn>
+          )}
         </Container>
       </Wrapper>
     );
@@ -150,4 +203,9 @@ const BtnLabel = styled.div`
   top: 15px;
   left: 195px;
   color: white;
+`;
+
+const Text = styled.div`
+  margin-top: 15px;
+  text-align: center;
 `;

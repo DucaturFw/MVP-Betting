@@ -19,20 +19,20 @@ export default {
     }
 
     contractInstance = new localWeb3.eth.Contract(abi, contractAddress);
-    this.updateAccount();
-    // accountInterval = setInterval(this.updateAccount.bind(this), 100);
-
     // console.log("Contract methods: ", contractInstance.methods);
-
-    return this.getData();
+    
+    // accountInterval = setInterval(this.updateAccount.bind(this), 100);
+    return this.updateAccount();
   },
 
   updateAccount: function () {
     if (web3.eth.defaultAccount !== userAccount) {
       userAccount = web3.eth.defaultAccount;
 
-      // this.getData();
+      return this.getData();
     }
+    
+    return Promise.resolve();
   },
 
   getData: function () {
@@ -97,8 +97,11 @@ export default {
     }
   },
 
+  getTokens: function () {
+    return tokens;
+  },
+
   createBet: function ({ bet, price, amount }) {
-    // console.log('state', localWeb3.utils.toWei(amount, 'ether'));
     return new Promise((res, rej) => {
       contractInstance.methods.buyToken(stat.listPlaying, price, bet)
         .send({

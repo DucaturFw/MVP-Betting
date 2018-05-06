@@ -55,7 +55,7 @@ export default class Predict extends Component {
 
     this.setState(state => ({
       ...state,
-      available
+      available: available && this.props.status === 'success'
     }));
   };
 

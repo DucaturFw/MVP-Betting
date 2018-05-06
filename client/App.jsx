@@ -5,6 +5,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import './styles/base.css';
 import './styles/styles.less';
 
+import Hub from './components/hub';
 import Main from './components/main';
 import Header from './components/header';
 import Counters from './components/counters';
@@ -30,7 +31,8 @@ export default class App extends Component {
 
   componentDidMount() {
     wallet.init().then(data => {
-      this.setState({ loading: false, data });
+      let status = wallet.getStatus();
+      this.setState({ loading: false, data, status });
     });
   }
 
@@ -56,14 +58,17 @@ export default class App extends Component {
     }
 
     return (
-      <Main>
-        <Header onMenuClick={this.onMenuClick} />
-        <Counters tokens={this.state.data.tokens} />
-        <Prediction onPredictClick={this.onPredictionClick} />
-        <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} />
-        {this.state.showBet && <Predict onClose={this.onPredictionClick} />}
-        {this.state.showList && <List onClose={this.onMenuClick} tokens={this.state.data.tokens} />}
-      </Main>
+      <div>
+        <Hub status={this.state.status} />
+        <Main>
+          <Header onMenuClick={this.onMenuClick} />
+          <Counters tokens={this.state.data.tokens} />
+          <Prediction onPredictClick={this.onPredictionClick} />
+          <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} />
+          {this.state.showBet && <Predict onClose={this.onPredictionClick} status={this.state.status} />}
+          {this.state.showList && <List onClose={this.onMenuClick} tokens={this.state.data.tokens} />}
+        </Main>
+      </div>
     );
   }
 }

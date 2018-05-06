@@ -1,10 +1,14 @@
 import Web3 from 'web3';
 const abi = require('./abi.json');
 
+const SUCCESS_STATUS = 'sucess';
+const MISS_STATUS = 'miss';
+
 let localWeb3,
   contractInstance,
   userAccount,
-  accountInterval;
+  accountInterval,
+  status;
 
 let stat,
   currRate,
@@ -14,25 +18,31 @@ let stat,
 
 export default {
   init: function () {
-    if (typeof web3 !== 'undefined') {
-      localWeb3 = new Web3(web3.currentProvider);
-    }
+    return new Promise((res, rej) => {
+      if (typeof web3 !== 'undefined') {
+        localWeb3 = new Web3(web3.currentProvider);
+        status = SUCCESS_STATUS;
+      } else {
+        localWeb3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io'));
+        status = MISS_STATUS;
+      }
 
-    contractInstance = new localWeb3.eth.Contract(abi, contractAddress);
-    console.log("Contract methods: ", contractInstance.methods);
-    
-    // accountInterval = setInterval(this.updateAccount.bind(this), 100);
-    return this.updateAccount();
+      contractInstance = new localWeb3.eth.Contract(abi, contractAddress);
+      // console.log("Contract methods: ", contractInstance.methods);
+
+      // accountInterval = setInterval(this.updateAccount.bind(this), 100);
+      res(this.updateAccount());
+    });
   },
 
   updateAccount: function () {
-    if (web3.eth.defaultAccount !== userAccount) {
+    if (status == SUCCESS_STATUS && web3.eth.defaultAccount !== userAccount) {
       userAccount = web3.eth.defaultAccount;
 
       return this.getData();
+    } else {
+      return this.getData();
     }
-    
-    return Promise.resolve();
   },
 
   getData: function () {
@@ -41,28 +51,28 @@ export default {
       this.getCurrRate(),
       this.totalSupply()
     ])
-    .then(() => this.getBettingByID(stat.listPlaying))
-    .then(() => {
-      let promises = [];
+      .then(() => this.getBettingByID(stat.listPlaying))
+      .then(() => {
+        let promises = [];
 
-      for (let i = betting.startTokenId; i < total; i++)
-        promises.push(this.getTokenByID(i))
+        for (let i = betting.startTokenId; i < total; i++)
+          promises.push(this.getTokenByID(i))
 
-      return Promise.all(promises);
-    })
-    .then(res => {
-      tokens = res.map((token, idx) => ({
-        ...token,
-        id: idx
-      }))
+        return Promise.all(promises);
+      })
+      .then(res => {
+        tokens = res.map((token, idx) => ({
+          ...token,
+          id: idx
+        }))
 
-      return tokens;
-    })
-    .then(() => ({
-      tokens,
-      currRate,
-      betting,
-    }));
+        return tokens;
+      })
+      .then(() => ({
+        tokens,
+        currRate,
+        betting,
+      }));
   },
 
   getStat: function () {
@@ -124,8 +134,12 @@ export default {
     return userAccount;
   },
 
-  fromWei: function(amount) {
+  fromWei: function (amount) {
     return localWeb3.utils.fromWei(amount);
+  },
+
+  getStatus: function () {
+    return status;
   },
 
   createBet: function ({ bet, price, amount }) {

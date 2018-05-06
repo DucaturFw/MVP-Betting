@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default function({ onMenuClick }) {
+export default function ({ onMenuClick }) {
   return (
     <div className="t-itle">
       <div className="group8">

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { BET_MORE, BET_LESS } from '../../../models/consts';
 
 const START_POINT = 97;
 const STEP = 14;
@@ -93,18 +94,24 @@ export default class Scale extends Component {
       if (spread.hasOwnProperty(key)) {
         let prop = spread[key];
 
-        prop.forEach((token, idx) => {
-          let sign = token.betType == 1 ? -1 : 1,
-            startY = sign > 0 ? 12 : -1,
-            x = (parseInt(token.bet) - 4000) / 1000 * 150 - 219,
-            y = startY + 10 * idx * sign;
+        const positive = prop.filter(token => token.betType == BET_MORE);
+        const negative = prop.filter(token => token.betType == BET_LESS);
 
-          tokens.push(<Token key={`${key}${idx}`} style={{ top: y, left: x }} type={token.betType} />)
-        })
+        positive.forEach((token, idx) => tokens.push(this.processToken({ token, idx, key })));
+        negative.forEach((token, idx) => tokens.push(this.processToken({ token, idx, key })));
       }
     }
 
     return tokens;
+  }
+
+  processToken({ token, idx, key }) {
+    let sign = token.betType == 1 ? -1 : 1,
+      startY = sign > 0 ? 12 : -1,
+      x = (parseInt(token.bet) - 4000) / 1000 * 150 - 219,
+      y = startY + 10 * idx * sign;
+
+    return <Token key={`${token.dateBuy}`} style={{ top: y, left: x }} type={token.betType} />;
   }
 
   render() {
@@ -150,7 +157,7 @@ const Delimeter = styled.img`
 const Token = styled.div`
   box-sizing: border-box;
   position: absolute;
-  width: 13px;
+  width: 14px;
   height: 10px;
 
   background-color: ${ props => props.type == 1 ? 'rgba(76, 215, 31, 0.78)' : 'rgba(215, 31, 31, 0.78)'};

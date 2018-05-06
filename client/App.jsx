@@ -32,7 +32,6 @@ export default class App extends Component {
   componentDidMount() {
     wallet.init().then(data => {
       let status = wallet.getStatus();
-      console.log(status);
       this.setState({ loading: false, data, status });
     });
   }

@@ -22,7 +22,7 @@ export default class App extends Component {
 
     this.state = {
       showBet: false,
-      showList: true,
+      showList: false,
       loading: true,
       data: {}
     };
@@ -49,7 +49,7 @@ export default class App extends Component {
   };
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
 
     if (this.state.loading) {
       return <Main>Loading...</Main>;
@@ -60,7 +60,7 @@ export default class App extends Component {
         <Header onMenuClick={this.onMenuClick} />
         <Counters tokens={this.state.data.tokens} />
         <Prediction onPredictClick={this.onPredictionClick} />
-        <Range />
+        <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} />
         {this.state.showBet && <Predict onClose={this.onPredictionClick} />}
         {this.state.showList && <List onClose={this.onMenuClick} tokens={this.state.data.tokens} />}
       </Main>

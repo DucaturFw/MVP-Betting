@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 export default function ({ status }) {
+  if (status === "success") {
+    return null;
+  }
   return (
     <Wrap>
       To make bet please install <a href="https://metamask.io" target="_blank">MetaMask</a>

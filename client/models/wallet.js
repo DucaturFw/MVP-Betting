@@ -1,7 +1,7 @@
 import Web3 from 'web3';
 const abi = require('./abi.json');
 
-const SUCCESS_STATUS = 'sucess';
+const SUCCESS_STATUS = 'success';
 const MISS_STATUS = 'miss';
 
 let localWeb3,

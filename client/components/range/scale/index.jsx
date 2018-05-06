@@ -7,8 +7,8 @@ import Labels from './labels';
 export default function ({ tokens, curr }) {
   return (
     <Wrap>
-      <StyledLines />
-      <Labels />
+      <StyledLines curr={curr} tokens={tokens} />
+      <Labels curr={curr} />
     </Wrap>
   );
 }

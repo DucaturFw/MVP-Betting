@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default function ({ curr }) {
 
-    let currentCourse = 10000,
+    let currentCourse = parseInt(curr),
         min = currentCourse - 4000,
         max = currentCourse + 4000,
         prices = []

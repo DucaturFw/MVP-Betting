@@ -49,7 +49,7 @@ export default class App extends Component {
   };
 
   render() {
-    // console.log(this.state);
+    console.log(this.state);
 
     if (this.state.loading) {
       return <Main>Loading...</Main>;

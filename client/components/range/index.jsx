@@ -7,7 +7,7 @@ export default function ({ tokens, curr }) {
   return (
     <div className="beting-line">
       <Scale tokens={tokens} curr={curr} />
-      <Twitter />
+      {/* <Twitter /> */}
     </div>
   );
 }

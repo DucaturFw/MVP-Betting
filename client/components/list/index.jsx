@@ -37,7 +37,7 @@ export default class Predict extends Component {
     const userAccount = Wallet.getUserAccount();
 
     return tokens.filter(token => {
-      return token.ownerToken == userAccount;
+      return token.ownerToken.toLowerCase() == userAccount.toLowerCase();
     });
   }
 

@@ -7,9 +7,8 @@ import { BET_LESS, BET_MORE } from './../../models/consts';
 
 const FORMAT = 'D MMMM YYYY';
 
-export default function({ bets }) {
+export default function ({ bets }) {
   const items = bets.map((bet, idx) => {
-    console.log(bet);
     return (
       <RowTable key={idx}>
         <Col1>1 Bitcoin = ${bet.bet}</Col1>

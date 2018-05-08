@@ -72,9 +72,14 @@ export default class Predict extends Component {
   handlePredict = () => {
     this.setState({ loading: true });
 
-    Wallet.createBet(this.state)
-      .then(() => this.setState({ loading: false }))
-      .catch(() => this.setState({ loading: false }));
+    Wallet.createBet(this.state);
+    // .then(({ events }) => {
+    //   const { LogToken } = events;
+
+    //   console.log('fire event', LogToken);
+    //   Wallet.fire(LogToken.returnValues);
+    // });
+    // .catch(() => this.setState({ loading: false }));
   };
 
   render() {

@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-export default function ({ status }) {
-  if (status === "success") {
+export default function({ status }) {
+  if (status === 'success') {
     return null;
   }
+
+  const text = status === 'login' ? 'To make bet please authorize in' : 'To make bet please install';
+
   return (
     <Wrap>
-      To make bet please install <a href="https://metamask.io" target="_blank">MetaMask</a>
+      {text}{' '}
+      <a href="https://metamask.io" target="_blank">
+        MetaMask
+      </a>
     </Wrap>
   );
 }
@@ -22,4 +28,4 @@ const Wrap = styled.div`
   font-size: 18px;
 
   background: red;
-`
+`;

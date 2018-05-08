@@ -2,13 +2,15 @@ import Web3 from 'web3';
 const abi = require('./abi.json');
 
 const SUCCESS_STATUS = 'success';
+const LOGIN_STATUS = 'login';
 const MISS_STATUS = 'miss';
 
 let localWeb3,
   contractInstance,
   userAccount,
   accountInterval,
-  status;
+  status,
+  cb;
 
 let stat,
   currRate,
@@ -21,7 +23,7 @@ export default {
     return new Promise((res, rej) => {
       if (typeof web3 !== 'undefined') {
         localWeb3 = new Web3(web3.currentProvider);
-        status = SUCCESS_STATUS;
+        status = LOGIN_STATUS;
       } else {
         localWeb3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io'));
         status = MISS_STATUS;
@@ -30,14 +32,46 @@ export default {
       contractInstance = new localWeb3.eth.Contract(abi, contractAddress);
       // console.log("Contract methods: ", contractInstance.methods);
 
-      // accountInterval = setInterval(this.updateAccount.bind(this), 100);
+      accountInterval = setInterval(this.updateAccount.bind(this), 100);
       res(this.updateAccount());
     });
   },
 
+  fire(event) {
+    console.log(event);
+
+    let token = {
+      payment: event.amount,
+      ownerToken: event.user,
+      bet: event.betVal,
+      betType: event.betType
+    };
+
+    console.log(token);
+    
+    this.getData().then(({
+      tokens,
+      currRate,
+      betting,
+    }) => {
+      tokens.push(token);
+
+      cb({
+        tokens,
+        currRate,
+        betting,
+      })
+    });
+  },
+
+  subscription(_cb) {
+    cb = _cb;
+  },
+
   updateAccount: function () {
-    if (status == SUCCESS_STATUS && web3.eth.defaultAccount !== userAccount) {
+    if (status != MISS_STATUS && web3.eth.defaultAccount !== userAccount) {
       userAccount = web3.eth.defaultAccount;
+      status = SUCCESS_STATUS;
 
       return this.getData();
     } else {

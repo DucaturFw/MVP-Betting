@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+
 import { BET_MORE, BET_LESS } from '../../../models/consts';
+import Wallet from '../../../models/wallet';
 
 const START_POINT = 97;
 const STEP = 14;
@@ -9,12 +11,12 @@ const RANGE = 150;
 const PRICE_RANGE = 100;
 
 export default class Scale extends Component {
-
   constructor(opts) {
     super(opts);
 
     this.state = {
-      spread: {}
+      spread: {},
+      info: {}
     };
   }
 
@@ -37,8 +39,8 @@ export default class Scale extends Component {
             spread[bet] = [token];
           }
         }
-      })
-    })
+      });
+    });
 
     this.setState({ spread });
   }
@@ -111,7 +113,46 @@ export default class Scale extends Component {
       x = (parseInt(token.bet) - 4000) / 1000 * 150 - 219,
       y = startY + 10 * idx * sign;
 
-    return <Token key={`${token.dateBuy}`} style={{ top: y, left: x }} type={token.betType} />;
+    return (
+      <Token
+        key={`${token.dateBuy}`}
+        style={{ top: y, left: x }}
+        type={token.betType}
+        onMouseEnter={this.mouseEnter.bind(this, { x, y, token })}
+        onMouseLeave={this.mouseEnter.bind(this, {})}
+      />
+    );
+  }
+
+  mouseEnter({ x, y, token }) {
+    this.setState({ info: { x, y, token } });
+  }
+
+  get tooltip() {
+    if (!this.state.info.token) return null;
+
+    const { token, x, y } = this.state.info;
+
+    return (
+      <Tooltip style={{ left: x - 70, top: y - 110 }}>
+        <div>
+          <span>Who:</span>
+          <Value>{token.ownerToken}</Value>
+        </div>
+        <div>
+          <span>Bet:</span>
+          <Value>{token.bet} $</Value>
+        </div>
+        <div>
+          <span>When:</span>
+          <Value>{token.dateBuy}</Value>
+        </div>
+        <div>
+          <span>Amount:</span>
+          <Value>{Wallet.fromWei(token.payment)} ETH</Value>
+        </div>
+      </Tooltip>
+    );
   }
 
   render() {
@@ -123,6 +164,7 @@ export default class Scale extends Component {
         {this.tokens}
         {this.points}
         {this.negativeDel}
+        {this.tooltip}
       </Container>
     );
   }
@@ -160,8 +202,33 @@ const Token = styled.div`
   width: 14px;
   height: 10px;
 
-  background-color: ${ props => props.type == 1 ? 'rgba(76, 215, 31, 0.78)' : 'rgba(215, 31, 31, 0.78)'};
+  background-color: ${props => (props.type == 1 ? 'rgba(76, 215, 31, 0.78)' : 'rgba(215, 31, 31, 0.78)')};
   border-style: solid;
   border-width: 1px;
-  border-color: ${ props => props.type == 1 ? 'rgba(76, 215, 31, 0.61)' : 'rgba(215, 31, 31, 0.61)'};
+  border-color: ${props => (props.type == 1 ? 'rgba(76, 215, 31, 0.61)' : 'rgba(215, 31, 31, 0.61)')};
+`;
+
+const Tooltip = styled.div`
+  width: 150px;
+  height: 80px;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  padding: 5px 10px;
+
+  color: white;
+  overflow: hidden;
+
+  font-size: 14px;
+  font-family: 'San Francisco', Helvetica, Arial, serif;
+
+  left: 795px;
+  top: -110px;
+`;
+
+const Value = styled.span`
+  display: inline-block;
+  margin-left: 5px;
+  font-weight: bold;
 `;

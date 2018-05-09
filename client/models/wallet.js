@@ -38,30 +38,14 @@ export default {
   },
 
   fire(event) {
-    console.log(event);
-
-    let token = {
-      payment: event.amount,
-      ownerToken: event.user,
-      bet: event.betVal,
-      betType: event.betType
-    };
-
-    console.log(token);
-    
-    this.getData().then(({
-      tokens,
-      currRate,
-      betting,
-    }) => {
-      tokens.push(token);
-
-      cb({
-        tokens,
-        currRate,
-        betting,
+    console.log('have event', event);
+    setTimeout(() => {
+      console.log('get data');
+      this.getData().then(res => {
+        console.log(res);
+        cb(res);
       })
-    });
+    }, 10000);
   },
 
   subscription(_cb) {

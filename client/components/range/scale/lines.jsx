@@ -108,7 +108,6 @@ export default class Scale extends Component {
   }
 
   processToken({ token, idx, key }) {
-    console.log(key);
     let sign = token.betType == 1 ? -1 : 1,
       startY = sign > 0 ? 12 : -1,
       x = (key - 6000) / 1000 * 150 + 84,

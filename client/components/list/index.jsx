@@ -63,6 +63,7 @@ const Wrapper = styled.div`
   left: 243px;
   border-radius: 17px;
   overflow: hidden;
+  overflow-y: auto;
 
   opacity: 0;
   transform: translateY(2.4rem);

@@ -5,7 +5,7 @@ import { BET_MORE, BET_LESS } from '../../../models/consts';
 import Wallet from '../../../models/wallet';
 
 const START_POINT = 97;
-const STEP = 14;
+const STEP = 15;
 const RANGE = 150;
 
 const PRICE_RANGE = 100;
@@ -108,9 +108,10 @@ export default class Scale extends Component {
   }
 
   processToken({ token, idx, key }) {
+    console.log(key);
     let sign = token.betType == 1 ? -1 : 1,
       startY = sign > 0 ? 12 : -1,
-      x = (parseInt(token.bet) - 4000) / 1000 * 150 - 219,
+      x = (key - 6000) / 1000 * 150 + 84,
       y = startY + 10 * idx * sign;
 
     return (

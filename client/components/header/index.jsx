@@ -15,7 +15,6 @@ export default class Header extends Component {
   };
 
   handleBids = () => {
-    console.log('bids');
     this.handleMenu();
     this.props.onMenuClick();
   };

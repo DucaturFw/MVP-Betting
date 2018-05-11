@@ -43,7 +43,6 @@ export default class App extends Component {
   }
 
   onMenuClick = () => {
-    console.log('start');
     this.setState(state => ({
       ...state,
       showList: !state.showList

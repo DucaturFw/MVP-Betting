@@ -6,7 +6,23 @@ export default function({ status }) {
     return null;
   }
 
-  const text = status === 'login' ? 'To make bet please authorize in' : 'To make bet please install';
+  let text;
+  switch (status) {
+    case 'login': {
+      text = 'To make bet please authorize in';
+      break;
+    }
+
+    case 'bad_newtwork': {
+      text = 'To make bet please switch into Ropsen Network';
+      break;
+    }
+
+    case 'miss': {
+      text = 'To make bet please install';
+      break;
+    }
+  }
 
   return (
     <Wrap>

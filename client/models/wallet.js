@@ -4,6 +4,8 @@ const abi = require('./abi.json');
 const SUCCESS_STATUS = 'success';
 const LOGIN_STATUS = 'login';
 const MISS_STATUS = 'miss';
+const GOOD_NETWORK_STATUS = 'good_newtwork';
+const BAD_NETWORK_STATUS = 'bad_newtwork';
 
 let localWeb3,
   contractInstance,
@@ -20,29 +22,60 @@ let stat,
 
 export default {
   init: function () {
-    return new Promise((res, rej) => {
-      if (typeof web3 !== 'undefined') {
-        localWeb3 = new Web3(web3.currentProvider);
-        status = LOGIN_STATUS;
-      } else {
-        localWeb3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io'));
-        status = MISS_STATUS;
-      }
-
+    return this.getNetwork().then(() => {
       contractInstance = new localWeb3.eth.Contract(abi, contractAddress);
       // console.log("Contract methods: ", contractInstance.methods);
 
-      accountInterval = setInterval(this.updateAccount.bind(this), 100);
-      res(this.updateAccount());
+      // accountInterval = setInterval(this.updateAccount.bind(this), 100);
+      return this.updateAccount();
+    })
+  },
+
+  getNetwork() {
+    return new Promise((res, rej) => {
+      if (typeof web3 !== 'undefined') {
+        this.resolveNetwork()
+          .then(() => {
+            localWeb3 = new Web3(web3.currentProvider);
+            status = LOGIN_STATUS;
+    
+            res();
+          })
+          .catch(() => {
+            localWeb3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io'));
+            status = BAD_NETWORK_STATUS;
+    
+            res();
+          });
+      } else {
+        localWeb3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io'));
+        status = MISS_STATUS;
+
+        res();
+      }
+    });
+  },
+
+  resolveNetwork() {
+    return new Promise((res, rej) => {
+      web3.version.getNetwork((err, netId) => {
+        if (netId == 3) {
+          status = GOOD_NETWORK_STATUS;
+          res();
+        } else {
+          status = BAD_NETWORK_STATUS;
+          rej();
+        }
+      })
     });
   },
 
   fire(event) {
-    console.log('have event', event);
+    // console.log('have event', event);
     setTimeout(() => {
-      console.log('get data');
+      // console.log('get data');
       this.getData().then(res => {
-        console.log(res);
+        // console.log(res);
         cb(res);
       })
     }, 10000);
@@ -53,7 +86,8 @@ export default {
   },
 
   updateAccount: function () {
-    if (status != MISS_STATUS && web3.eth.defaultAccount !== userAccount) {
+    console.log('status', status);
+    if (status == LOGIN_STATUS && web3.eth.defaultAccount !== userAccount) {
       userAccount = web3.eth.defaultAccount;
       status = SUCCESS_STATUS;
 

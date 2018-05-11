@@ -63,7 +63,8 @@ const Wrapper = styled.div`
   left: 243px;
   border-radius: 17px;
   overflow: hidden;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 
   opacity: 0;
   transform: translateY(2.4rem);
@@ -83,4 +84,5 @@ const Title = styled.div`
 const Container = styled.div`
   text-align: center;
   padding: 30px;
+  overflow-y: auto;
 `;

@@ -27,7 +27,7 @@ export default class Predict extends Component {
   }
 
   onClose = e => {
-    if (!e.target.classList.contains('menu-icon') && !this.node.contains(e.target)) {
+    if (!e.target.classList.contains('handleMenu') && !this.node.contains(e.target)) {
       this.props.onClose();
     }
   };

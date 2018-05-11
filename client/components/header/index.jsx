@@ -8,15 +8,18 @@ export default class Header extends Component {
     this.state = {
       showMenu: false
     };
+
+    this.handleBids = this.handleClick.bind(this, 'bids');
+    this.handleTerms = this.handleClick.bind(this, 'terms');
   }
 
   handleMenu = () => {
     this.setState({ showMenu: !this.state.showMenu });
   };
 
-  handleBids = () => {
+  handleClick = e => {
     this.handleMenu();
-    this.props.onMenuClick();
+    this.props.onMenuClick(e);
   };
 
   render() {
@@ -39,10 +42,8 @@ export default class Header extends Component {
           <img onClick={this.handleMenu} className="menu-icon" src="./images/mvp  newmenu icon.png" />
           {this.state.showMenu && (
             <Menu>
-              <Item className="handleMenu" onClick={this.handleBids}>
-                Bids list
-              </Item>
-              <Item>Terms of use</Item>
+              <Item onClick={this.handleBids}>Bids list</Item>
+              <Item onClick={this.handleTerms}>Terms of use</Item>
             </Menu>
           )}
         </div>

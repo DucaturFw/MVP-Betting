@@ -6,7 +6,8 @@ import styled from 'styled-components';
 
 export default class Popup extends Component {
   static propTypes = {
-    onClose: PropTypes.func.isRequired
+    onClose: PropTypes.func.isRequired,
+    name: PropTypes.string.isRequired
   };
 
   constructor(opts) {
@@ -35,7 +36,7 @@ export default class Popup extends Component {
     if (!this.state.justMounted) {
       this.setState({ justMounted: true });
     } else {
-      this.props.onClose();
+      this.props.onClose(this.props.name);
     }
   };
 

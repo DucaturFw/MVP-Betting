@@ -77,7 +77,7 @@ export default class Predict extends Component {
     }
 
     return (
-      <Wrapper onClose={this.props.onClose}>
+      <Wrapper onClose={this.props.onClose} name="predict">
         <Title>Your prediction for Bitcoin</Title>
         <Container>
           <Item>

@@ -27,7 +27,7 @@ export default class Predict extends Component {
 
   render() {
     return (
-      <Wrapper onClose={this.props.onClose}>
+      <Wrapper onClose={this.props.onClose} name="bids">
         <Title>Your Bids List</Title>
         <Container>
           <Items bets={this.myTokens} />

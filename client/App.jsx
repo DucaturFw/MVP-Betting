@@ -16,6 +16,7 @@ import Range from './components/range';
 
 import Predict from './components/predict';
 import List from './components/list';
+import Terms from './components/terms';
 
 import wallet from './models/wallet';
 
@@ -24,11 +25,14 @@ export default class App extends Component {
     super(opts);
 
     this.state = {
-      showBet: false,
-      showList: false,
+      predict: false,
+      bids: false,
+      terms: false,
       loading: true,
       data: {}
     };
+
+    this.handlePredict = this.onMenuClick.bind(this, 'predict');
   }
 
   componentDidMount() {
@@ -44,17 +48,10 @@ export default class App extends Component {
     this.setState({ data });
   }
 
-  onMenuClick = () => {
+  onMenuClick = e => {
     this.setState(state => ({
       ...state,
-      showList: !state.showList
-    }));
-  };
-
-  onPredictionClick = () => {
-    this.setState(state => ({
-      ...state,
-      showBet: !state.showBet
+      [e]: !state[e]
     }));
   };
 
@@ -71,17 +68,22 @@ export default class App extends Component {
         <Main>
           <Header onMenuClick={this.onMenuClick} />
           <Counters tokens={this.state.data.tokens} />
-          <Prediction onPredictClick={this.onPredictionClick} />
+          <Prediction onPredictClick={this.handlePredict} />
           <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} />
         </Main>
-        {this.state.showList && (
+        {this.state.bids && (
           <Back>
             <List onClose={this.onMenuClick} tokens={this.state.data.tokens} />
           </Back>
         )}
-        {this.state.showBet && (
+        {this.state.predict && (
           <Back>
-            <Predict onClose={this.onPredictionClick} status={this.state.status} />
+            <Predict onClose={this.onMenuClick} status={this.state.status} />
+          </Back>
+        )}
+        {this.state.terms && (
+          <Back>
+            <Terms onClose={this.onMenuClick} />
           </Back>
         )}
       </div>

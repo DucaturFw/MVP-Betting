@@ -13,6 +13,7 @@ import Header from './components/header';
 import Counters from './components/counters';
 import Prediction from './components/prediction';
 import Range from './components/range';
+import Plus from './components/plus';
 
 import Predict from './components/predict';
 import List from './components/list';
@@ -70,6 +71,7 @@ export default class App extends Component {
           <Counters tokens={this.state.data.tokens} />
           <Prediction onPredictClick={this.handlePredict} />
           <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} />
+          <Plus />
         </Main>
         {this.state.bids && (
           <Back>

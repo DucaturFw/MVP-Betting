@@ -6,7 +6,7 @@ export default class Header extends Component {
     super(opts);
 
     this.state = {
-      showMenu: true
+      showMenu: false
     };
   }
 

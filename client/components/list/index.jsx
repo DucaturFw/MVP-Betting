@@ -39,12 +39,8 @@ export default class Predict extends Component {
 
 const Wrapper = styled(Popup)`
   background-color: rgba(255, 255, 255, 1);
-  top: 133px;
   height: 584px;
   width: 955px;
-  position: absolute;
-  margin: 0;
-  left: 243px;
   border-radius: 17px;
   overflow: hidden;
   display: flex;

@@ -5,6 +5,8 @@ import styled, { ThemeProvider } from 'styled-components';
 import './styles/base.css';
 import './styles/styles.less';
 
+import Back from './components/elements/background';
+
 import Hub from './components/inform';
 import Main from './components/main';
 import Header from './components/header';
@@ -71,9 +73,17 @@ export default class App extends Component {
           <Counters tokens={this.state.data.tokens} />
           <Prediction onPredictClick={this.onPredictionClick} />
           <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} />
-          {this.state.showBet && <Predict onClose={this.onPredictionClick} status={this.state.status} />}
-          {this.state.showList && <List onClose={this.onMenuClick} tokens={this.state.data.tokens} />}
         </Main>
+        {this.state.showList && (
+          <Back>
+            <List onClose={this.onMenuClick} tokens={this.state.data.tokens} />
+          </Back>
+        )}
+        {this.state.showBet && (
+          <Back>
+            <Predict onClose={this.onPredictionClick} status={this.state.status} />
+          </Back>
+        )}
       </div>
     );
   }

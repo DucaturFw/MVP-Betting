@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
 import Items from './items';
-
+import Popup from './../elements/popup';
 import Wallet from './../../models/wallet';
 import { BET_LESS, BET_MORE } from './../../models/consts';
 
@@ -16,22 +16,6 @@ export default class Predict extends Component {
     };
   }
 
-  componentDidMount() {
-    this.node = ReactDOM.findDOMNode(this);
-    window.addEventListener('click', this.onClose, false);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('click', this.onClose, false);
-    this.node = null;
-  }
-
-  onClose = e => {
-    if (!e.target.classList.contains('handleMenu') && !this.node.contains(e.target)) {
-      this.props.onClose();
-    }
-  };
-
   get myTokens() {
     const { tokens } = this.props;
     const userAccount = Wallet.getUserAccount();
@@ -43,7 +27,7 @@ export default class Predict extends Component {
 
   render() {
     return (
-      <Wrapper>
+      <Wrapper onClose={this.props.onClose}>
         <Title>Your Bids List</Title>
         <Container>
           <Items bets={this.myTokens} />
@@ -53,7 +37,7 @@ export default class Predict extends Component {
   }
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled(Popup)`
   background-color: rgba(255, 255, 255, 1);
   top: 133px;
   height: 584px;
@@ -65,10 +49,6 @@ const Wrapper = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
-  opacity: 0;
-  transform: translateY(2.4rem);
-  animation: showUp 0.25s cubic-bezier(0.06, 0.67, 0.37, 0.99) forwards;
 `;
 
 const Title = styled.div`

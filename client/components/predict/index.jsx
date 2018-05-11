@@ -24,9 +24,6 @@ export default class Predict extends Component {
   }
 
   componentDidMount() {
-    this.node = ReactDOM.findDOMNode(this);
-    window.addEventListener('click', this.onClose, false);
-
     this.setState(
       state => ({
         ...state,
@@ -34,11 +31,6 @@ export default class Predict extends Component {
       }),
       this.setParams
     );
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('click', this.onClose, false);
-    this.node = null;
   }
 
   setParams() {
@@ -57,12 +49,6 @@ export default class Predict extends Component {
       ...state,
       available: available && this.props.status === 'success'
     }));
-  };
-
-  onClose = e => {
-    if (!e.target.classList.contains('btn-prediction') && !this.node.contains(e.target)) {
-      this.props.onClose();
-    }
   };
 
   handleInput = e => {
@@ -84,14 +70,14 @@ export default class Predict extends Component {
   render() {
     if (this.state.loading) {
       return (
-        <Wrapper>
+        <Wrapper onClose={this.props.onClose}>
           <Text>Loading...</Text>
         </Wrapper>
       );
     }
 
     return (
-      <Wrapper>
+      <Wrapper onClose={this.props.onClose}>
         <Title>Your prediction for Bitcoin</Title>
         <Container>
           <Item>
@@ -124,7 +110,7 @@ export default class Predict extends Component {
   }
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled(Popup)`
   background-color: rgba(255, 255, 255, 1);
   top: 133px;
   height: 584px;
@@ -134,10 +120,6 @@ const Wrapper = styled.div`
   left: 455px;
   border-radius: 17px;
   overflow: hidden;
-
-  opacity: 0;
-  transform: translateY(2.4rem);
-  animation: showUp 0.25s cubic-bezier(0.06, 0.67, 0.37, 0.99) forwards;
 `;
 
 const Title = styled.div`

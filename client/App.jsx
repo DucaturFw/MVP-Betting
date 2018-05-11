@@ -5,7 +5,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import './styles/base.css';
 import './styles/styles.less';
 
-import Hub from './components/hub';
+import Hub from './components/inform';
 import Main from './components/main';
 import Header from './components/header';
 import Counters from './components/counters';
@@ -57,7 +57,7 @@ export default class App extends Component {
   };
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
 
     if (this.state.loading) {
       return <Main>Loading...</Main>;

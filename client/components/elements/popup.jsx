@@ -6,9 +6,16 @@ import styled from 'styled-components';
 
 export default class Popup extends Component {
   static propTypes = {
-    caller: PropTypes.string,
     onClose: PropTypes.func.isRequired
   };
+
+  constructor(opts) {
+    super(opts);
+
+    this.state = {
+      justMounted: false
+    };
+  }
 
   componentDidMount() {
     this.node = ReactDOM.findDOMNode(this);
@@ -21,21 +28,24 @@ export default class Popup extends Component {
   }
 
   onClose = e => {
-    const { caller, onClose } = this.props;
-    if (!e.target.classList.contains(caller) && !this.node.contains(e.target)) {
+    if (this.node.contains(e.target)) {
+      return;
+    }
+
+    if (!this.state.justMounted) {
+      this.setState({ justMounted: true });
+    } else {
       this.props.onClose();
     }
   };
 
   render() {
-    const { props } = this;
-    console.log(props);
-    return <Wrapper {...props}>{this.props.children}</Wrapper>;
+    return <Wrapper {...this.props}>{this.props.children}</Wrapper>;
   }
 }
 
 const Wrapper = styled.div`
-  /* opacity: 0;
+  opacity: 0;
   transform: translateY(2.4rem);
-  animation: showUp 0.25s cubic-bezier(0.06, 0.67, 0.37, 0.99) forwards; */
+  animation: showUp 0.25s cubic-bezier(0.06, 0.67, 0.37, 0.99) forwards;
 `;

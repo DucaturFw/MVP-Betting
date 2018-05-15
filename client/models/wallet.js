@@ -18,13 +18,15 @@ let stat,
   currRate,
   total,
   tokens,
-  betting;
+  betting,
+  prices;
 
 export default {
   init: function () {
     return this.getNetwork().then(() => {
       contractInstance = new localWeb3.eth.Contract(abi, contractAddress);
       // console.log("Contract methods: ", contractInstance.methods);
+      // console.log("Contract events: ", contractInstance.events);
 
       // accountInterval = setInterval(this.updateAccount.bind(this), 100);
       return this.updateAccount();
@@ -127,6 +129,24 @@ export default {
       }));
   },
 
+  getPrices: function () {
+    return contractInstance.getPastEvents('0xb3d1d66ddbb3da00d4d5d46d6a2832dff6e740a839b0d3060b40165ac4787c67', { fromBlock: 0, toBlock: "latest" })
+      .then(data => {
+        prices = data;
+
+        return Promise.all(prices.map(order => {
+          return localWeb3.eth.getBlock(order.blockNumber)
+        }))
+      })
+      .then(blocks => {
+
+        return prices.map((price, idx) => ({
+          block: blocks[idx],
+          event: price.returnValues
+        }));
+      });
+  },
+
   getStat: function () {
     return contractInstance.methods.getStat().call().then(result => {
       stat = result;
@@ -192,6 +212,10 @@ export default {
 
   getStatus: function () {
     return status;
+  },
+
+  getBlock: function (id) {
+    return localWeb3.eth.getBlock(id);
   },
 
   createBet: function ({ bet, price, amount }) {

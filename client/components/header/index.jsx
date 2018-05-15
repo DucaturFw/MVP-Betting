@@ -11,6 +11,8 @@ export default class Header extends Component {
 
     this.handleBids = this.handleClick.bind(this, 'bids');
     this.handleTerms = this.handleClick.bind(this, 'terms');
+    this.handleOracles = this.handleClick.bind(this, 'oracles');
+    this.handleFAQ = this.handleClick.bind(this, 'faq');
   }
 
   handleMenu = () => {
@@ -43,7 +45,9 @@ export default class Header extends Component {
           {this.state.showMenu && (
             <Menu>
               <Item onClick={this.handleBids}>Bids list</Item>
+              <Item onClick={this.handleOracles}>Oracle list</Item>
               <Item onClick={this.handleTerms}>Terms of use</Item>
+              <Item onClick={this.handleFAQ}>FAQ</Item>
             </Menu>
           )}
         </div>

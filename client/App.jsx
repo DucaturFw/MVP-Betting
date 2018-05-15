@@ -18,6 +18,8 @@ import Plus from './components/plus';
 import Predict from './components/predict';
 import List from './components/list';
 import Terms from './components/terms';
+import Oracles from './components/oracles';
+import FAQ from './components/faq';
 
 import wallet from './models/wallet';
 
@@ -29,6 +31,8 @@ export default class App extends Component {
       predict: false,
       bids: false,
       terms: false,
+      oracles: false,
+      faq: false,
       loading: true,
       data: {}
     };
@@ -73,6 +77,16 @@ export default class App extends Component {
           <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} />
           <Plus />
         </Main>
+        {this.state.oracles && (
+          <Back>
+            <Oracles onClose={this.onMenuClick} />
+          </Back>
+        )}
+        {this.state.faq && (
+          <Back>
+            <FAQ onClose={this.onMenuClick} />
+          </Back>
+        )}
         {this.state.bids && (
           <Back>
             <List onClose={this.onMenuClick} tokens={this.state.data.tokens} />

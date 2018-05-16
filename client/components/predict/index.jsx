@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
+import FA from 'react-fontawesome';
 
 import Popup from './../elements/popup';
 
@@ -19,13 +20,16 @@ export default class Predict extends Component {
       less: 0,
       text: '',
       available: false,
-      loading: false
+      loading: false,
+      completed: false
     };
   }
 
   componentDidMount() {
     this.setState(
       state => ({
+        loading: false,
+        completed: false,
         ...state,
         ...Wallet.getRange()
       }),
@@ -59,52 +63,74 @@ export default class Predict extends Component {
     this.setState({ loading: true });
 
     Wallet.createBet(this.state).then(({ events }) => {
+      this.setState({ completed: true });
       const { LogToken } = events;
-
       console.log('fire event', LogToken);
+
       Wallet.fire(LogToken.returnValues);
     });
     // .catch(() => this.setState({ loading: false }));
   };
 
   render() {
-    if (this.state.loading) {
-      return (
-        <Wrapper onClose={this.props.onClose}>
-          <Text>Loading...</Text>
-        </Wrapper>
-      );
-    }
+    // if (this.state.loading) {
+    //   return (
+    //     <Wrapper onClose={this.props.onClose} name="predict">
+
+    //     </Wrapper>
+    //   );
+    // }
 
     return (
       <Wrapper onClose={this.props.onClose} name="predict">
-        <Title>Your prediction for Bitcoin</Title>
-        <Container>
-          <Item>
-            <Label>Condition</Label>
-            <InputSelect name="bet" onChange={this.handleInput} value={this.state.bet}>
-              <option value={BET_MORE}>Price will be Higher than</option>
-              <option value={BET_LESS}>Price will be Lower than</option>
-            </InputSelect>
-          </Item>
-          <Item>
-            <Label>Price prediction</Label>
-            <Input name="price" value={this.state.price} onChange={this.handleInput} />
-            <Dollor>$</Dollor>
-          </Item>
-          {!this.state.available && <Text>{this.state.text}</Text>}
-          <Item>
-            <Label>Your bet in ETH</Label>
-            <Input name="amount" value={this.state.amount} onChange={this.handleInput} />
-          </Item>
+        {this.state.loading && (
+          <div>
+            <Title>MetaMask transaction confirmation</Title>
+            {!this.state.completed && (
+              <Text>
+                <p>Waiting for transaction confirmation</p>
+                <Icon name="spinner" spin size="4x" />
+              </Text>
+            )}
+            {this.state.completed && (
+              <Text completed>
+                <p>Transaction successfully confirmed</p>
+                <Icon name="check" size="4x" />
+              </Text>
+            )}
+          </div>
+        )}
+        {!this.state.loading && (
+          <div>
+            <Title>Your prediction for Bitcoin</Title>
+            <Container>
+              <Item>
+                <Label>Condition</Label>
+                <InputSelect name="bet" onChange={this.handleInput} value={this.state.bet}>
+                  <option value={BET_MORE}>Price will be Higher than</option>
+                  <option value={BET_LESS}>Price will be Lower than</option>
+                </InputSelect>
+              </Item>
+              <Item>
+                <Label>Price prediction</Label>
+                <Input name="price" value={this.state.price} onChange={this.handleInput} />
+                <Dollor>$</Dollor>
+              </Item>
+              {!this.state.available && <StyledText>{this.state.text}</StyledText>}
+              <Item>
+                <Label>Your bet in ETH</Label>
+                <Input name="amount" value={this.state.amount} onChange={this.handleInput} />
+              </Item>
 
-          {this.state.available && (
-            <Btn onClick={this.handlePredict}>
-              <img className="b-t-noutline" src="./images/btn.png" />
-              <BtnLabel>Make Prediction</BtnLabel>
-            </Btn>
-          )}
-        </Container>
+              {this.state.available && (
+                <Btn onClick={this.handlePredict}>
+                  <img className="b-t-noutline" src="./images/btn.png" />
+                  <BtnLabel>Make Prediction</BtnLabel>
+                </Btn>
+              )}
+            </Container>
+          </div>
+        )}
       </Wrapper>
     );
   }
@@ -119,11 +145,10 @@ const Wrapper = styled(Popup)`
 `;
 
 const Title = styled.div`
-  height: auto;
-  width: 240px;
+  width: 100%;
   margin: 50px auto 0;
   font-family: 'San Francisco', Helvetica, Arial, serif;
-  font-size: 36px;
+  font-size: 32px;
   color: rgba(12, 38, 74, 1);
   text-align: center;
 `;
@@ -184,6 +209,18 @@ const BtnLabel = styled.div`
 `;
 
 const Text = styled.div`
+  margin-top: 150px;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+  color: ${props => (props.completed ? '#00B13E' : '#498FE1')};
+`;
+
+const StyledText = styled(Text)`
   margin-top: 15px;
+`;
+
+const Icon = styled(FA)`
+  margin-top: 50px;
   text-align: center;
 `;

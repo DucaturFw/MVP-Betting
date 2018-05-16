@@ -28,7 +28,7 @@ export default class App extends Component {
     super(opts);
 
     this.state = {
-      predict: false,
+      predict: true,
       bids: false,
       terms: false,
       oracles: false,

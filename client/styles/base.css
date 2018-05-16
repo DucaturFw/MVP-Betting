@@ -11,7 +11,7 @@ body {
 .mvp-new {
     width: 100%;
     min-width: 1440px;
-    height: 100vh;
+    height: 1150px;
     min-height: 1000px;
     overflow: hidden;
     margin: 0;
@@ -29,7 +29,7 @@ div {
 
 .mvp-new .main {
     width: 1440px;
-    height: 100%;
+    height: 1150px;
     position:relative; 
     margin:auto;
     box-shadow: 0px 0px 15px 20px rgba(0,0,0,0.15);

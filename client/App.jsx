@@ -31,7 +31,7 @@ export default class App extends Component {
       predict: false,
       bids: false,
       terms: false,
-      oracles: true,
+      oracles: false,
       faq: false,
       loading: true,
       data: {}

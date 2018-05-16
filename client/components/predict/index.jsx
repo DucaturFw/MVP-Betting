@@ -60,7 +60,10 @@ export default class Predict extends Component {
   };
 
   handlePredict = () => {
-    this.setState({ loading: true });
+    this.setState(state => ({
+      ...state,
+      loading: true
+    }));
 
     Wallet.createBet(this.state).then(({ events }) => {
       this.setState({ completed: true });
@@ -72,38 +75,33 @@ export default class Predict extends Component {
     // .catch(() => this.setState({ loading: false }));
   };
 
+  get text() {
+    return this.state.loading ? 'MetaMask transaction confirmation' : 'Your prediction for Bitcoin';
+  }
+
   render() {
-    // if (this.state.loading) {
-    //   return (
-    //     <Wrapper onClose={this.props.onClose} name="predict">
-
-    //     </Wrapper>
-    //   );
-    // }
-
     return (
       <Wrapper onClose={this.props.onClose} name="predict">
-        {this.state.loading && (
-          <div>
-            <Title>MetaMask transaction confirmation</Title>
-            {!this.state.completed && (
-              <Text>
-                <p>Waiting for transaction confirmation</p>
-                <Icon name="spinner" spin size="4x" />
-              </Text>
-            )}
-            {this.state.completed && (
-              <Text completed>
-                <p>Transaction successfully confirmed</p>
-                <Icon name="check" size="4x" />
-              </Text>
-            )}
-          </div>
-        )}
-        {!this.state.loading && (
-          <div>
-            <Title>Your prediction for Bitcoin</Title>
-            <Container>
+        <Title>{this.text}</Title>
+        <Container>
+          {this.state.loading && (
+            <div>
+              {!this.state.completed && (
+                <Text>
+                  <p>Waiting for transaction confirmation</p>
+                  <Icon name="spinner" spin size="4x" />
+                </Text>
+              )}
+              {this.state.completed && (
+                <Text completed>
+                  <p>Transaction successfully confirmed</p>
+                  <Icon name="check" size="4x" />
+                </Text>
+              )}
+            </div>
+          )}
+          {!this.state.loading && (
+            <div>
               <Item>
                 <Label>Condition</Label>
                 <InputSelect name="bet" onChange={this.handleInput} value={this.state.bet}>
@@ -121,16 +119,15 @@ export default class Predict extends Component {
                 <Label>Your bet in ETH</Label>
                 <Input name="amount" value={this.state.amount} onChange={this.handleInput} />
               </Item>
-
-              {this.state.available && (
-                <Btn onClick={this.handlePredict}>
-                  <img className="b-t-noutline" src="./images/btn.png" />
-                  <BtnLabel>Make Prediction</BtnLabel>
-                </Btn>
-              )}
-            </Container>
-          </div>
-        )}
+            </div>
+          )}
+          {this.state.available && (
+            <Btn onClick={this.handlePredict} hide={this.state.loading}>
+              <img className="b-t-noutline" src="./images/btn.png" />
+              <BtnLabel>Make Prediction</BtnLabel>
+            </Btn>
+          )}
+        </Container>
       </Wrapper>
     );
   }
@@ -194,6 +191,8 @@ const Btn = styled.div`
   margin-top: 35px;
   position: relative;
   cursor: pointer;
+
+  display: ${props => (props.hide ? 'none' : 'block')};
 `;
 
 const BtnLabel = styled.div`

@@ -103,6 +103,10 @@ export default {
     }
   },
 
+  hasAccount: function () {
+    return !!userAccount;
+  },
+
   getData: function () {
     return Promise.all([
       this.getStat(),

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import Wallet from './../../models/wallet';
+
 export default class Header extends Component {
   constructor(opts) {
     super(opts);
@@ -9,10 +11,20 @@ export default class Header extends Component {
       showMenu: false
     };
 
-    this.handleBids = this.handleClick.bind(this, 'bids');
+    this.handleBids = this.openBids.bind(this, 'bids');
     this.handleTerms = this.handleClick.bind(this, 'terms');
     this.handleOracles = this.handleClick.bind(this, 'oracles');
     this.handleFAQ = this.handleClick.bind(this, 'faq');
+  }
+
+  hasAccount() {
+    return Wallet.hasAccount();
+  }
+
+  openBids(name) {
+    if (this.hasAccount()) {
+      this.handleClick(name);
+    }
   }
 
   handleMenu = () => {
@@ -44,7 +56,9 @@ export default class Header extends Component {
           <img onClick={this.handleMenu} className="menu-icon" src="./images/mvp  newmenu icon.png" />
           {this.state.showMenu && (
             <Menu>
-              <Item onClick={this.handleBids}>Bids list</Item>
+              <Item onClick={this.handleBids} disabled={!this.hasAccount()}>
+                Bids list
+              </Item>
               <Item onClick={this.handleOracles}>Oracle list</Item>
               <Item onClick={this.handleTerms}>Terms of use</Item>
               <Item onClick={this.handleFAQ}>FAQ</Item>
@@ -75,7 +89,7 @@ const Menu = styled.div`
 
 const Item = styled.div`
   padding: 15px 10px;
-  color: white;
+  color: ${props => (props.disabled ? '#999' : 'white')};
 
   font-family: 'San Francisco', Helvetica, Arial, serif;
 

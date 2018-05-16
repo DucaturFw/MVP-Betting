@@ -24,6 +24,7 @@ let stat,
 export default {
   init: function () {
     return this.getNetwork().then(() => {
+      // eslint-disable-next-line
       contractInstance = new localWeb3.eth.Contract(abi, contractAddress);
       // console.log("Contract methods: ", contractInstance.methods);
       // console.log("Contract events: ", contractInstance.events);
@@ -38,6 +39,7 @@ export default {
       if (typeof web3 !== 'undefined') {
         this.resolveNetwork()
           .then(() => {
+            // eslint-disable-next-line
             localWeb3 = new Web3(web3.currentProvider);
             status = LOGIN_STATUS;
     
@@ -60,6 +62,7 @@ export default {
 
   resolveNetwork() {
     return new Promise((res, rej) => {
+      // eslint-disable-next-line
       web3.version.getNetwork((err, netId) => {
         if (netId == 3) {
           status = GOOD_NETWORK_STATUS;
@@ -88,8 +91,9 @@ export default {
   },
 
   updateAccount: function () {
-    console.log('status', status);
+    // eslint-disable-next-line
     if (status == LOGIN_STATUS && web3.eth.defaultAccount !== userAccount) {
+      // eslint-disable-next-line
       userAccount = web3.eth.defaultAccount;
       status = SUCCESS_STATUS;
 

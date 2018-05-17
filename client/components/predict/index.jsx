@@ -6,22 +6,20 @@ import FA from 'react-fontawesome';
 import Popup from './../elements/popup';
 
 import Wallet from './../../models/wallet';
-import { BET_LESS, BET_MORE } from './../../models/consts';
 
 export default class Predict extends Component {
   constructor(opts) {
     super(opts);
 
     this.state = {
-      bet: BET_MORE,
-      price: 10000,
-      amount: 1,
-      more: 0,
-      less: 0,
+      from: 10000,
+      to: 10100,
+      amount: 0.1,
       text: '',
       available: false,
       loading: false,
-      completed: false
+      completed: false,
+      difference: 100
     };
   }
 
@@ -37,26 +35,35 @@ export default class Predict extends Component {
     );
   }
 
+  handleInput = e => {
+    this.setState({ [e.target.name]: e.target.value }, this.setParams);
+  };
+
   setParams() {
-    this.setState(state => ({ text: this.getText(state) }), this.setAvailble);
+    this.setAvailble();
+    this.setDifference();
   }
 
-  getText({ more, less, bet }) {
-    return bet === BET_MORE ? `Price must be more than ${more}` : `Price must be less than ${less}`;
+  setDifference() {
+    const { from, amount } = this.state;
+    const price = parseFloat(amount, 10);
+    const difference = price > 1 ? 1000 : Math.round(price / 0.1) * 100;
+
+    this.setState({
+      difference,
+      text: `Your range is from:${from} to ${+from + +difference}`
+    });
   }
 
   setAvailble = () => {
-    const { bet, price, more, less } = this.state;
-    const available = bet === BET_MORE ? price > more : price < less;
+    const { from, to, difference } = this.state;
+    const raz = to - from;
+    const available = raz > 0 && raz <= difference;
 
     this.setState(state => ({
       ...state,
       available: available && this.props.status === 'success'
     }));
-  };
-
-  handleInput = e => {
-    this.setState({ [e.target.name]: e.target.value }, this.setParams);
   };
 
   handlePredict = () => {
@@ -68,11 +75,9 @@ export default class Predict extends Component {
     Wallet.createBet(this.state).then(({ events }) => {
       this.setState({ completed: true });
       const { LogToken } = events;
-      console.log('fire event', LogToken);
 
       Wallet.fire(LogToken.returnValues);
     });
-    // .catch(() => this.setState({ loading: false }));
   };
 
   get text() {
@@ -103,22 +108,20 @@ export default class Predict extends Component {
           {!this.state.loading && (
             <div>
               <Item>
-                <Label>Condition</Label>
-                <InputSelect name="bet" onChange={this.handleInput} value={this.state.bet}>
-                  <option value={BET_MORE}>Price will be Higher than</option>
-                  <option value={BET_LESS}>Price will be Lower than</option>
-                </InputSelect>
-              </Item>
-              <Item>
-                <Label>Price prediction</Label>
-                <Input name="price" value={this.state.price} onChange={this.handleInput} />
-                <Dollor>$</Dollor>
-              </Item>
-              {!this.state.available && <StyledText>{this.state.text}</StyledText>}
-              <Item>
                 <Label>Your bet in ETH</Label>
                 <Input name="amount" value={this.state.amount} onChange={this.handleInput} />
               </Item>
+              <Item>
+                <Label>From</Label>
+                <Input name="from" value={this.state.from} onChange={this.handleInput} />
+                <Dollor>$</Dollor>
+              </Item>
+              <Item>
+                <Label>To</Label>
+                <Input name="to" value={this.state.to} onChange={this.handleInput} />
+                <Dollor>$</Dollor>
+              </Item>
+              <StyledText>{this.state.text}</StyledText>
             </div>
           )}
           {this.state.available && (

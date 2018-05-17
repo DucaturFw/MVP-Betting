@@ -226,9 +226,10 @@ export default {
     return localWeb3.eth.getBlock(id);
   },
 
-  createBet: function ({ bet, price, amount }) {
+  createBet: function ({ from, to, amount }) {
+    console.log(from, to, amount);
     return new Promise((res, rej) => {
-      contractInstance.methods.buyToken(stat.listPlaying, price, bet)
+      contractInstance.methods.buyToken(from, to)
         .send({
           from: userAccount,
           value: localWeb3.utils.toWei(amount.toString(), 'ether')

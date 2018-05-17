@@ -132,7 +132,6 @@ export default class Scale extends Component {
     if (!this.state.info.token) return null;
 
     const { token, x, y } = this.state.info;
-    console.log(token);
 
     return (
       <Tooltip style={{ left: x - 70, top: y - 110 }}>

@@ -7,11 +7,13 @@ import { BET_LESS, BET_MORE } from './../../models/consts';
 
 const FORMAT = 'D MMMM YYYY';
 
-export default function ({ bets }) {
+export default function({ bets }) {
   const items = bets.map((bet, idx) => {
     return (
       <RowTable key={idx}>
-        <Col1>1 Bitcoin = ${bet.bet}</Col1>
+        <Col1>
+          1 Bitcoin = ${bet.betFrom} - ${bet.betTo}
+        </Col1>
         <Col2>{format(bet.dateBuy * 1e3, FORMAT)}</Col2>
         <Col3>{Wallet.fromWei(bet.price)} ETH</Col3>
         <Col4>{bet.result}</Col4>

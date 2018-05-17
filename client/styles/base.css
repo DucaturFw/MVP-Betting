@@ -79,7 +79,7 @@ div {
 
 .mvp-new .bull-and-bear .page1 {
     background-color: rgba(255, 255, 255, 0.0);
-    top: 0;
+    top: -30px;
     height: 782px;
     width: 608px;
     position: absolute;
@@ -291,7 +291,7 @@ div {
 
 .mvp-new .bull-and-bear .bull2 {
     background-color: rgba(255, 255, 255, 0.0);
-    top: 218px;
+    top: 188px;
     height: 399px;
     width: 684px;
     position: absolute;
@@ -301,7 +301,7 @@ div {
 
 .mvp-new .bull-and-bear .bear {
     background-color: rgba(255, 255, 255, 0.0);
-    top: 324px;
+    top: 224px;
     height: 356px;
     width: 644px;
     position: absolute;
@@ -409,7 +409,7 @@ div {
 
 .mvp-new .bull-and-bear .page11 .fill18 {
     background-color: rgba(255, 255, 255, 0.0);
-    top: 60px;
+    top: 20px;
     height: 201px;
     width: 179px;
     position: absolute;
@@ -431,7 +431,7 @@ div {
 
 .mvp-new .bull-and-bear .page11 .fill251 {
     background-color: rgba(255, 255, 255, 0.0);
-    top: 73px;
+    top: 33px;
     height: 201px;
     width: 179px;
     position: absolute;
@@ -441,7 +441,7 @@ div {
 
 .mvp-new .bull-and-bear .page11 .fill27 {
     background-color: rgba(255, 255, 255, 0.0);
-    top: 66px;
+    top: 26px;
     height: 192px;
     width: 170px;
     position: absolute;
@@ -451,7 +451,7 @@ div {
 
 .mvp-new .b-ears {
     background-color: rgba(255, 255, 255, 0.0);
-    top: 296px;
+    top: 226px;
     height: auto;
     width: auto;
     position: absolute;
@@ -466,7 +466,7 @@ div {
 
 .mvp-new .a900 {
     background-color: rgba(255, 255, 255, 0.0);
-    top: 339px;
+    top: 279px;
     height: auto;
     width: auto;
     position: absolute;
@@ -656,7 +656,7 @@ div {
 
 .mvp-new .beting-line {
     background-color: rgba(255, 255, 255, 0.0);
-    top: 782px;
+    top: 682px;
     height: 178px;
     width: 1349px;
     position: absolute;
@@ -2956,7 +2956,7 @@ div {
 
 .mvp-new .button {
     background-color: rgba(255, 255, 255, 0.0);
-    top: 627px;
+    top: 577px;
     height: 76px;
     width: 312px;
     position: absolute;

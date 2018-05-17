@@ -36,7 +36,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   position: absolute;
-  top: 950px;
+  top: 850px;
   width: 100%;
   font-family: 'San Francisco', Helvetica, Arial, serif;
 `;

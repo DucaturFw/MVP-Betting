@@ -67,6 +67,53 @@
 			},
 			{
 				"indexed": false,
+				"name": "_ex1",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_ex2",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_ex3",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_ex4",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_ex5",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_exD",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_exAvg",
+				"type": "uint256"
+			}
+		],
+		"name": "LogOracle",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_event",
+				"type": "string"
+			},
+			{
+				"indexed": false,
 				"name": "user",
 				"type": "address"
 			},
@@ -248,6 +295,44 @@
 			}
 		],
 		"name": "removeAdmin",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_ex1",
+				"type": "uint256"
+			},
+			{
+				"name": "_ex2",
+				"type": "uint256"
+			},
+			{
+				"name": "_ex3",
+				"type": "uint256"
+			},
+			{
+				"name": "_ex4",
+				"type": "uint256"
+			},
+			{
+				"name": "_ex5",
+				"type": "uint256"
+			},
+			{
+				"name": "_exD",
+				"type": "uint256"
+			},
+			{
+				"name": "_exAvg",
+				"type": "uint256"
+			}
+		],
+		"name": "setRate",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",

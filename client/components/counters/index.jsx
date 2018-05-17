@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import BN from 'bn.js';
+import _ from 'lodash';
 
 import Wallet from './../../models/wallet';
-import { BET_LESS, BET_MORE } from './../../models/consts';
 
-export default function({ tokens }) {
-  const bears = tokens.filter(token => token.betType == BET_LESS).length;
-  const bulls = tokens.filter(token => token.betType == BET_MORE).length;
+export default function({ tokens, curr }) {
+  let ranges = tokens.map(token => _.range(token.betFrom, token.betTo, 100));
+  let flatRanges = _.flatten(ranges);
+
+  const bears = flatRanges.filter(price => price < curr).length;
+  const bulls = flatRanges.filter(price => price >= curr).length;
   const sum = tokens.reduce((s, item) => s.add(new BN(item.payment, 10)), new BN(0, 10));
   const inEth = Wallet.fromWei(sum);
 

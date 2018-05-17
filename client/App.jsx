@@ -72,7 +72,7 @@ export default class App extends Component {
         <Hub status={this.state.status} />
         <Main>
           <Header onMenuClick={this.onMenuClick} />
-          <Counters tokens={this.state.data.tokens} />
+          <Counters tokens={this.state.data.tokens} curr={this.state.data.currRate} />
           <Prediction onPredictClick={this.handlePredict} />
           <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} />
           <Plus />

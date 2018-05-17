@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import _ from 'lodash';
 
 import { BET_MORE, BET_LESS } from '../../../models/consts';
 import Wallet from '../../../models/wallet';
@@ -29,17 +30,21 @@ export default class Scale extends Component {
     let { spread } = this.state;
     let range = this.createRange();
 
-    range.forEach(price => {
-      tokens.forEach(token => {
-        let bet = parseInt(token.bet);
-        if (bet >= price && bet < price + PRICE_RANGE) {
-          if (spread[bet]) {
-            spread[bet].push(token);
+    // range.forEach(price => {
+    tokens.forEach(token => {
+      const range = _.range(token.betFrom, token.betTo, 100);
+
+      range.forEach(item => {
+        // let bet = parseInt(token.bet);
+        // if (item >= price && item < price + PRICE_RANGE) {
+        if (range.includes(item)) {
+          if (spread[item]) {
+            spread[item].push(token);
           } else {
-            spread[bet] = [token];
+            spread[item] = [token];
           }
         }
-      });
+      })
     });
 
     this.setState({ spread });
@@ -96,11 +101,11 @@ export default class Scale extends Component {
       if (spread.hasOwnProperty(key)) {
         let prop = spread[key];
 
-        const positive = prop.filter(token => token.betType == BET_MORE);
-        const negative = prop.filter(token => token.betType == BET_LESS);
+        // const positive = prop.filter(token => token.betType == BET_MORE);
+        // const negative = prop.filter(token => token.betType == BET_LESS);
 
-        positive.forEach((token, idx) => tokens.push(this.processToken({ token, idx, key })));
-        negative.forEach((token, idx) => tokens.push(this.processToken({ token, idx, key })));
+        // positive.forEach((token, idx) => tokens.push(this.processToken({ token, idx, key })));
+        prop.forEach((token, idx) => tokens.push(this.processToken({ token, idx, key })));
       }
     }
 
@@ -108,7 +113,7 @@ export default class Scale extends Component {
   }
 
   processToken({ token, idx, key }) {
-    let sign = token.betType == 1 ? -1 : 1,
+    let sign = 0, //token.betType == 1 ? -1 : 1,
       startY = sign > 0 ? 12 : -1,
       x = (key - 6000) / 1000 * 150 + 84,
       y = startY + 10 * idx * sign;

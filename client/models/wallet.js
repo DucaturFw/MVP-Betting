@@ -42,13 +42,13 @@ export default {
             // eslint-disable-next-line
             localWeb3 = new Web3(web3.currentProvider);
             status = LOGIN_STATUS;
-    
+
             res();
           })
           .catch(() => {
             localWeb3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io'));
             status = BAD_NETWORK_STATUS;
-    
+
             res();
           });
       } else {

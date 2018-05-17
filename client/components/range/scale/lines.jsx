@@ -30,13 +30,10 @@ export default class Scale extends Component {
     let { spread } = this.state;
     let range = this.createRange();
 
-    // range.forEach(price => {
     tokens.forEach(token => {
       const range = _.range(token.betFrom, token.betTo, 100);
 
       range.forEach(item => {
-        // let bet = parseInt(token.bet);
-        // if (item >= price && item < price + PRICE_RANGE) {
         if (range.includes(item)) {
           if (spread[item]) {
             spread[item].push(token);
@@ -44,7 +41,7 @@ export default class Scale extends Component {
             spread[item] = [token];
           }
         }
-      })
+      });
     });
 
     this.setState({ spread });
@@ -101,10 +98,6 @@ export default class Scale extends Component {
       if (spread.hasOwnProperty(key)) {
         let prop = spread[key];
 
-        // const positive = prop.filter(token => token.betType == BET_MORE);
-        // const negative = prop.filter(token => token.betType == BET_LESS);
-
-        // positive.forEach((token, idx) => tokens.push(this.processToken({ token, idx, key })));
         prop.forEach((token, idx) => tokens.push(this.processToken({ token, idx, key })));
       }
     }
@@ -113,16 +106,18 @@ export default class Scale extends Component {
   }
 
   processToken({ token, idx, key }) {
-    let sign = 0, //token.betType == 1 ? -1 : 1,
+    let { curr } = this.props;
+
+    let sign = curr <= key ? -1 : 1,
       startY = sign > 0 ? 12 : -1,
       x = (key - 6000) / 1000 * 150 + 84,
       y = startY + 10 * idx * sign;
 
     return (
       <Token
-        key={`${token.dateBuy}`}
+        key={`${token.dateBuy}${key}`}
         style={{ top: y, left: x }}
-        type={token.betType}
+        type={key >= curr}
         onMouseEnter={this.mouseEnter.bind(this, { x, y, token })}
         onMouseLeave={this.mouseEnter.bind(this, {})}
       />
@@ -137,6 +132,7 @@ export default class Scale extends Component {
     if (!this.state.info.token) return null;
 
     const { token, x, y } = this.state.info;
+    console.log(token);
 
     return (
       <Tooltip style={{ left: x - 70, top: y - 110 }}>
@@ -145,8 +141,12 @@ export default class Scale extends Component {
           <Value>{token.ownerToken}</Value>
         </div>
         <div>
-          <span>Bet:</span>
-          <Value>{token.bet} $</Value>
+          <span>From:</span>
+          <Value>{token.betFrom} $</Value>
+        </div>
+        <div>
+          <span>To:</span>
+          <Value>{token.betTo} $</Value>
         </div>
         <div>
           <span>When:</span>
@@ -207,15 +207,15 @@ const Token = styled.div`
   width: 14px;
   height: 10px;
 
-  background-color: ${props => (props.type == 1 ? 'rgba(76, 215, 31, 0.78)' : 'rgba(215, 31, 31, 0.78)')};
+  background-color: ${props => (props.type == true ? 'rgba(76, 215, 31, 0.78)' : 'rgba(215, 31, 31, 0.78)')};
   border-style: solid;
   border-width: 1px;
-  border-color: ${props => (props.type == 1 ? 'rgba(76, 215, 31, 0.61)' : 'rgba(215, 31, 31, 0.61)')};
+  border-color: ${props => (props.type == true ? 'rgba(76, 215, 31, 0.61)' : 'rgba(215, 31, 31, 0.61)')};
 `;
 
 const Tooltip = styled.div`
   width: 150px;
-  height: 80px;
+  height: 100px;
   position: absolute;
   z-index: 2;
   background: rgba(0, 0, 0, 0.9);

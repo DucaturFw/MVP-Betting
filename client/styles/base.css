@@ -2867,7 +2867,7 @@ div {
     position: absolute;
     margin: 0;
     left: 0;
-    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-family: 'Montserrat-Bold', Helvetica, Arial, serif;
     font-size: 64.0px;
     color: rgba(0, 0, 0, 1.0);
     text-align: left
@@ -2879,7 +2879,7 @@ div {
     width: 400px;
     position: absolute;
     left: 174px;
-    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
+    font-family: 'Montserrat-Bold', Helvetica, Arial, serif;
     font-size: 64.0px;
     color: rgba(255, 255, 255, 1.0);
 }
@@ -2890,7 +2890,7 @@ div {
     width: 400px;
     position: absolute;
     left: 170px;
-    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
+    font-family: 'Montserrat-Bold', Helvetica, Arial, serif;
     font-size: 64.0px;
     color: rgba(0, 0, 0, 1.0);
 }
@@ -2903,7 +2903,7 @@ div {
     position: absolute;
     margin: 0;
     left: 4px;
-    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-family: 'Montserrat-Bold', Helvetica, Arial, serif;
     font-size: 64.0px;
     color: rgba(175, 132, 255, 1.0);
     text-align: left

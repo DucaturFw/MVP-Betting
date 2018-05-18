@@ -67,17 +67,19 @@ export default class Predict extends Component {
   };
 
   handlePredict = () => {
-    this.setState(state => ({
-      ...state,
-      loading: true
-    }));
+    if (this.state.available) {
+      this.setState(state => ({
+        ...state,
+        loading: true
+      }));
 
-    Wallet.createBet(this.state).then(({ events }) => {
-      this.setState({ completed: true });
-      const { LogToken } = events;
+      Wallet.createBet(this.state).then(({ events }) => {
+        this.setState({ completed: true });
+        const { LogToken } = events;
 
-      Wallet.fire(LogToken.returnValues);
-    });
+        Wallet.fire(LogToken.returnValues);
+      });
+    }
   };
 
   get text() {
@@ -124,12 +126,10 @@ export default class Predict extends Component {
               <StyledText>{this.state.text}</StyledText>
             </div>
           )}
-          {this.state.available && (
-            <Btn onClick={this.handlePredict} hide={this.state.loading}>
-              <img className="b-t-noutline" src="./images/btn.png" />
-              <BtnLabel>Make Prediction</BtnLabel>
-            </Btn>
-          )}
+          <Btn onClick={this.handlePredict} hide={this.state.loading} available={this.state.available}>
+            <Img className="b-t-noutline" src="./images/btn.png" available={this.state.available} />
+            <BtnLabel>Make Prediction</BtnLabel>
+          </Btn>
         </Container>
       </Wrapper>
     );
@@ -190,7 +190,7 @@ const Dollor = styled.div`
 const Btn = styled.div`
   margin-top: 35px;
   position: relative;
-  cursor: pointer;
+  cursor: ${props => (props.available ? 'pointer' : 'not-allowed')};
 
   display: ${props => (props.hide ? 'none' : 'block')};
 `;
@@ -220,4 +220,8 @@ const StyledText = styled(Text)`
 const Icon = styled(FA)`
   margin-top: 50px;
   text-align: center;
+`;
+
+const Img = styled.img`
+  opacity: ${props => (props.available ? '1' : '0.5')};
 `;

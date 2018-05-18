@@ -229,7 +229,7 @@ div {
     left: 41px
 }
 
-.mvp-new .bull-and-bear .page1-copy .group42 .group29 {
+.mvp-new .bull-and-bear .page1-copy .group42 .bank9 {
     background-color: rgba(255, 255, 255, 0.0);
     top: 0;
     height: 56px;
@@ -289,34 +289,26 @@ div {
     left: 419px
 }
 
-.mvp-new .bull-and-bear .bull2 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 188px;
-    height: 399px;
-    width: 684px;
+.mvp-new .bull-and-bear .bull {
     position: absolute;
-    margin: 0;
-    left: 0
+    top: 208px;
+    height: auto;
+    width: 594px;
+    left: 0;
 }
 
 .mvp-new .bull-and-bear .bear {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 224px;
-    height: 356px;
-    width: 644px;
     position: absolute;
-    margin: 0;
-    left: 917px
+    top: 244px;
+    left: 967px;
+    width: 554px;
+    height: auto;
 }
 
 .mvp-new .bull-and-bear .page11 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 263px;
-    height: 336px;
-    width: 526px;
     position: absolute;
-    margin: 0;
-    left: 531px
+    top: 205px;
+    left: 531px;
 }
 
 .mvp-new .bull-and-bear .page11 .fill11 {
@@ -449,64 +441,56 @@ div {
     left: 156px
 }
 
-.mvp-new .b-ears {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 226px;
-    height: auto;
-    width: auto;
+.mvp-new .bears-title {
+    top: 206px;
     position: absolute;
-    margin: 0;
     left: 882px;
-    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
     font-size: 48.0px;
     color: rgba(208, 1, 27, 1.0);
-    text-align: center;
-    line-height: 48.0px
+    line-height: 48.0px;
+    width: 167px;
 }
 
-.mvp-new .a900 {
+.mvp-new .bears-count {
     background-color: rgba(255, 255, 255, 0.0);
-    top: 279px;
-    height: auto;
-    width: auto;
+    top: 259px;
+    width: 167px;
     position: absolute;
-    margin: 0;
-    left: 903px;
-    font-family: 'San Francisco', Helvetica, Arial, serif;
+    left: 883px;
+    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
     font-size: 64.0px;
     color: rgba(255, 255, 255, 1.0);
     text-align: center;
     line-height: 48.0px
 }
 
-.mvp-new .b-ulls {
+.mvp-new .bulls-title {
     background-color: rgba(255, 255, 255, 0.0);
     top: 446px;
+    left: 440px;
     height: auto;
     width: auto;
     position: absolute;
     margin: 0;
-    left: 460px;
-    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
     font-size: 48.0px;
     color: rgba(126, 210, 33, 1.0);
     text-align: center;
     line-height: 48.0px
 }
 
-.mvp-new .a7645 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 495px;
-    height: auto;
-    width: auto;
+.mvp-new .bulls-count {
     position: absolute;
-    margin: 0;
-    left: 462px;
-    font-family: 'San Francisco', Helvetica, Arial, serif;
+    top: 495px;
+    left: 442px;
+    height: auto;
+    width: 160px;
+    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
     font-size: 64.0px;
     color: rgba(255, 255, 255, 1.0);
     text-align: center;
-    line-height: 48.0px
+    line-height: 48.0px;
 }
 
 .mvp-new .t-itle {
@@ -516,7 +500,7 @@ div {
     width: 1292px;
     position: absolute;
     margin: 0;
-    left: 74px
+    left: 74px;
 }
 
 .mvp-new .t-itle .group8 {
@@ -530,17 +514,12 @@ div {
 }
 
 .mvp-new .t-itle .group8 .the-most-accurate-pr {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 0;
-    height: auto;
-    width: auto;
     position: absolute;
-    margin: 0;
+    top: 0;
     left: -1px;
-    font-family: 'San Francisco', Helvetica, Arial, serif;
     font-size: 36.0px;
     color: rgba(255, 255, 255, 1.0);
-    text-align: center
+    text-align: center;
 }
 
 .mvp-new .t-itle .group8 .n-av {
@@ -655,13 +634,9 @@ div {
 }
 
 .mvp-new .beting-line {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 682px;
-    height: 178px;
-    width: 1349px;
     position: absolute;
-    margin: 0;
-    left: 46px
+    top: 632px;
+    left: 46px;
 }
 
 .mvp-new .beting-line .group5 {
@@ -2878,27 +2853,13 @@ div {
     line-height: 14.0px
 }
 
-.mvp-new .group2 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 132px;
-    height: 89px;
-    width: 438px;
+.mvp-new .bank {
     position: absolute;
-    margin: 0;
-    left: 499px
+    top: 112px;
+    left: 499px;
 }
 
-.mvp-new .group2 .group6 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 0;
-    height: 89px;
-    width: 438px;
-    position: relative;
-    margin: 0;
-    left: 0
-}
-
-.mvp-new .group2 .group6 .win-copy {
+.mvp-new .bank .win-copy {
     background-color: rgba(255, 255, 255, 0.0);
     top: 11px;
     height: auto;
@@ -2912,21 +2873,29 @@ div {
     text-align: left
 }
 
-.mvp-new .group2 .group6 .a153-btc-copy {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 10px;
+.mvp-new .bank .a153-btc {
+    top: 0;
     height: auto;
-    width: 300px;
+    width: 400px;
     position: absolute;
-    margin: 0;
-    left: 170px;
-    font-family: 'San Francisco', Helvetica, Arial, serif;
+    left: 174px;
+    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
     font-size: 64.0px;
-    color: rgba(0, 0, 0, 1.0);
-    text-align: left
+    color: rgba(255, 255, 255, 1.0);
 }
 
-.mvp-new .group2 .group6 .w-in {
+.mvp-new .bank .a153-btc-copy {
+    top: 10px;
+    height: auto;
+    width: 400px;
+    position: absolute;
+    left: 170px;
+    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
+    font-size: 64.0px;
+    color: rgba(0, 0, 0, 1.0);
+}
+
+.mvp-new .bank .w-in {
     background-color: rgba(255, 255, 255, 0.0);
     top: 1px;
     height: auto;
@@ -2940,28 +2909,12 @@ div {
     text-align: left
 }
 
-.mvp-new .group2 .group6 .a153-btc {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 0;
-    height: auto;
-    width: 300px;
-    position: absolute;
-    margin: 0;
-    left: 174px;
-    font-family: 'San Francisco', Helvetica, Arial, serif;
-    font-size: 64.0px;
-    color: rgba(255, 255, 255, 1.0);
-    text-align: left
-}
-
 .mvp-new .button {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 577px;
+    position: absolute;
+    top: 567px;
+    left: 564px;
     height: 76px;
     width: 312px;
-    position: absolute;
-    margin: 0;
-    left: 564px
 }
 
 .mvp-new .button .b-t-noutline {

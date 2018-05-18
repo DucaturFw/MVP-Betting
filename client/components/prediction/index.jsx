@@ -15,7 +15,7 @@ const Btn = styled.div`
   box-sizing: border-box;
   background-image: url('./images/mvp  newbtnoutline.png');
 
-  font-family: 'San Francisco', Helvetica, Arial, serif;
+  font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
   font-size: 24px;
   color: white;
 

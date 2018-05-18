@@ -32,7 +32,7 @@ export default function({ children }) {
               <img className="group41" src="./images/mvp  new group 41.png" />
             </div>
           </div>
-          <img className="bull2" src="./images/mvp  newbull2.png" />
+          <img className="bull" src="./images/mvp  newbull2.png" />
           <img className="bear" src="./images/mvp  newbear.png" />
           <div className="page11">
             <img className="fill11" src="./images/mvp  newfill 1  1.png" />

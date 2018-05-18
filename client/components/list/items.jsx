@@ -39,7 +39,7 @@ export default function({ bets }) {
 }
 
 const Row = styled.div`
-  font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+  font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
   line-height: 18px;
   display: flex;
   text-align: left;

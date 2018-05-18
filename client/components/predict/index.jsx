@@ -147,7 +147,6 @@ const Wrapper = styled(Popup)`
 const Title = styled.div`
   width: 100%;
   margin: 50px auto 0;
-  font-family: 'San Francisco', Helvetica, Arial, serif;
   font-size: 32px;
   color: rgba(12, 38, 74, 1);
   text-align: center;
@@ -164,7 +163,6 @@ const Item = styled.div`
 `;
 
 const Label = styled.div`
-  font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
   font-size: 18px;
   color: rgba(49, 53, 65, 1);
   line-height: 22px;
@@ -185,7 +183,6 @@ const Dollor = styled.div`
   position: absolute;
   top: 35px;
   right: 160px;
-  font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
   font-size: 18px;
   color: rgba(49, 53, 65, 1);
 `;
@@ -199,7 +196,6 @@ const Btn = styled.div`
 `;
 
 const BtnLabel = styled.div`
-  font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
   font-size: 18px;
   letter-spacing: 0.86px;
   line-height: 22px;
@@ -214,7 +210,6 @@ const Text = styled.div`
   margin-top: 150px;
   text-align: center;
   font-size: 16px;
-  font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
   color: ${props => (props.completed ? '#00B13E' : '#498FE1')};
 `;
 

@@ -15,18 +15,16 @@ export default function({ tokens, curr }) {
 
   return (
     <div>
-      <div className="group2">
-        <div className="group6">
-          <div className="win-copy">WIN</div>
-          <div className="a153-btc-copy">{inEth} ETH</div>
-          <div className="w-in">WIN</div>
-          <div className="a153-btc">{inEth} ETH</div>
-        </div>
+      <div className="bank">
+        <div className="win-copy">WIN</div>
+        <div className="a153-btc-copy">{inEth} ETH</div>
+        <div className="w-in">WIN</div>
+        <div className="a153-btc">{inEth} ETH</div>
       </div>
-      <div className="b-ears">BEARS</div>
-      <div className="a900">{bears}</div>
-      <div className="b-ulls">BULLS</div>
-      <div className="a7645">{bulls}</div>
+      <div className="bears-title">BEARS</div>
+      <div className="bears-count">{bears}</div>
+      <div className="bulls-title">BULLS</div>
+      <div className="bulls-count">{bulls}</div>
     </div>
   );
 }

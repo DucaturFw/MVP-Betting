@@ -91,7 +91,7 @@ const Item = styled.div`
   padding: 15px 10px;
   color: ${props => (props.disabled ? '#999' : 'white')};
 
-  font-family: 'San Francisco', Helvetica, Arial, serif;
+  font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
 
   &:hover {
     opacity: 0.56;

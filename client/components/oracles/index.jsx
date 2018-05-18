@@ -80,7 +80,7 @@ const Title = styled.div`
   height: auto;
   width: 240px;
   margin: 50px auto 0;
-  font-family: 'San Francisco', Helvetica, Arial, serif;
+  font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
   font-size: 36px;
   color: rgba(12, 38, 74, 1);
   text-align: center;
@@ -89,7 +89,7 @@ const Title = styled.div`
 const Container = styled.div`
   padding: 30px;
   overflow-y: auto;
-  font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
+  font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
 `;
 
 const Table = styled.table`

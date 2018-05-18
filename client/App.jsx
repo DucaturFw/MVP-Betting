@@ -32,7 +32,7 @@ export default class App extends Component {
       bids: false,
       terms: false,
       oracles: false,
-      faq: true,
+      faq: false,
       loading: true,
       data: {}
     };

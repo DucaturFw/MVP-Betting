@@ -26,8 +26,8 @@ export default {
     return this.getNetwork().then(() => {
       // eslint-disable-next-line
       contractInstance = new localWeb3.eth.Contract(abi, contractAddress);
-      // console.log("Contract methods: ", contractInstance.methods);
-      // console.log("Contract events: ", contractInstance.events);
+      console.log("Contract methods: ", contractInstance.methods);
+      console.log("Contract events: ", contractInstance.events);
 
       // accountInterval = setInterval(this.updateAccount.bind(this), 100);
       return this.updateAccount();
@@ -64,6 +64,8 @@ export default {
     return new Promise((res, rej) => {
       // eslint-disable-next-line
       web3.version.getNetwork((err, netId) => {
+        console.log(netId);
+        // Check Ropsten Network
         if (netId == 3) {
           status = GOOD_NETWORK_STATUS;
           res();
@@ -157,24 +159,28 @@ export default {
 
   getStat: function () {
     return contractInstance.methods.getStat().call().then(result => {
+      // console.log('stat', result);
       stat = result;
     })
   },
 
   getCurrRate: function () {
     return contractInstance.methods.curRate().call().then(result => {
+      // console.log('currRate', result);
       currRate = result;
     })
   },
 
   totalSupply: function () {
     return contractInstance.methods.totalSupply().call().then(result => {
+      // console.log('totalSupply', result);
       total = result;
     })
   },
 
   getBettingByID: function (id) {
     return contractInstance.methods.getBettingByID(id).call().then(result => {
+      // console.log('getBettingByID', result);
       betting = result;
       return betting;
     })

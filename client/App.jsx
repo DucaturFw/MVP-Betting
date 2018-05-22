@@ -45,7 +45,6 @@ export default class App extends Component {
       let status = wallet.getStatus();
       this.setState({ loading: false, data, status });
     });
-
     wallet.subscription(this.update.bind(this));
   }
 

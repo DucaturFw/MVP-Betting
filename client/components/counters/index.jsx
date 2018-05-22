@@ -16,11 +16,17 @@ export default function({ tokens, curr }) {
   return (
     <div>
       <div className="bank">
-        <div className="win-copy">WIN</div>
-        <div className="a153-btc-copy">{inEth} ETH</div>
-        <div className="w-in">WIN</div>
-        <div className="a153-btc">{inEth} ETH</div>
+        <div className="shadow">
+          <span className="win">WIN</span>
+          <span className="text">&nbsp;&nbsp;{inEth} ETH</span>
+        </div>
+
+        <div className="title">
+          <span className="win">WIN</span>
+          <span className="text">&nbsp;&nbsp;{inEth} ETH</span>
+        </div>
       </div>
+
       <div className="bears-title">BEARS</div>
       <div className="bears-count">{bears}</div>
       <div className="bulls-title">BULLS</div>

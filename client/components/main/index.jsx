@@ -4,7 +4,7 @@ export default function({ children }) {
   return (
     <div className="mvp-new">
       <div className="main">
-        <img className="b-g" src="./images/mvp  newbg.png" />
+        <img className="background" src="./images/mvp  newbg.png" />
         <img className="oval" src="./images/mvp  newoval.png" />
         <img className="map" src="./images/mvp  newmap.png" />
 
@@ -34,7 +34,7 @@ export default function({ children }) {
           </div>
           <img className="bull" src="./images/mvp  newbull2.png" />
           <img className="bear" src="./images/mvp  newbear.png" />
-          <div className="page11">
+          <div className="vs">
             <img className="fill11" src="./images/mvp  newfill 1  1.png" />
             <img className="fill3" src="./images/mvp  newfill 3.png" />
             <img className="group7" src="./images/mvp  new group 7.png" />
@@ -43,10 +43,10 @@ export default function({ children }) {
             <img className="fill121" src="./images/mvp  newfill 12  1.png" />
             <img className="fill141" src="./images/mvp  newfill 14  1.png" />
             <img className="fill16" src="./images/mvp  newfill 16.png" />
-            <img className="fill18" src="./images/mvp  newfill 18.png" />
             <img className="fill20" src="./images/mvp  newfill 20.png" />
-            <img className="fill251" src="./images/mvp  newfill 25  1.png" />
-            <img className="fill27" src="./images/mvp  newfill 27.png" />
+            <img className="vs_1" src="./images/mvp  newfill 18.png" />
+            <img className="vs_2" src="./images/mvp  newfill 25  1.png" />
+            <img className="vs_3" src="./images/mvp  newfill 27.png" />
           </div>
         </div>
 

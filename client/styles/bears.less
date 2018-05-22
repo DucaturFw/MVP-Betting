@@ -1,0 +1,124 @@
+@font-size: 7vw;
+
+@bull-size: 400px;
+@bull-left: -220px;
+
+@bear-size: 400px;
+@bear-right: -230px;
+
+.bull-and-bear .bull {
+    position: absolute;
+    top: 208px;
+    height: auto;
+    width: 594px;
+    left: -40px;
+
+    @media screen and (max-width: @mobile-width) {
+        left: @bull-left;
+        width: @bull-size;
+      }
+}
+
+.bull-and-bear .bear {
+    position: absolute;
+    top: 244px;
+    left: 967px;
+    width: 554px;
+    height: auto;
+
+    @media screen and (max-width: @mobile-width) {
+        left: auto;
+        right: @bear-right;
+        width: @bear-size;
+    }
+}
+
+
+
+.bears-title {
+    position: absolute;
+    top: 206px;
+    left: 882px;
+    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
+    font-size: 48.0px;
+    color: rgba(208, 1, 27, 1.0);
+    line-height: 48.0px;
+    width: 167px;
+
+    @media screen and (max-width: @mobile-width) {
+        font-size: @font-size;
+
+      top: 150px;
+      left: auto;
+      right: 30px;
+
+      width: 80px;
+    }
+}
+
+.bears-count {
+    top: 259px;
+    width: 167px;
+    position: absolute;
+    left: 883px;
+    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
+    font-size: 64.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: center;
+    line-height: 48.0px;
+
+    @media screen and (max-width: @mobile-width) {
+        font-size: @font-size;
+
+      top: 180px;
+      left: auto;
+      right: 30px;
+
+      width: 80px;
+    }
+}
+
+.bulls-title {
+    top: 446px;
+    left: 440px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
+    font-size: 48.0px;
+    color: rgba(126, 210, 33, 1.0);
+    text-align: center;
+    line-height: 48.0px;
+
+    @media screen and (max-width: @mobile-width) {
+        font-size: @font-size;
+
+      top: 396px;
+      left: 60px;
+
+      width: 80px;
+    }
+}
+
+.bulls-count {
+    position: absolute;
+    top: 495px;
+    left: 442px;
+    height: auto;
+    width: 160px;
+    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
+    font-size: 64.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: center;
+    line-height: 48.0px;
+
+    @media screen and (max-width: @mobile-width) {
+        font-size: @font-size;
+
+      top: 426px;
+      left: 60px;
+
+      width: 80px;
+    }
+}

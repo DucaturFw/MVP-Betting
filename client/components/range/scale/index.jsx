@@ -15,6 +15,9 @@ export default function({ tokens, curr }) {
 
 const Wrap = styled.div`
   position: relative;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const StyledLines = styled(Lines)`

@@ -127,7 +127,7 @@ export default class Predict extends Component {
             </div>
           )}
           <Btn onClick={this.handlePredict} hide={this.state.loading} available={this.state.available}>
-            <Img className="b-t-noutline" src="./images/btn.png" available={this.state.available} />
+            <Img className="predict" src="./images/btn.png" available={this.state.available} />
             <BtnLabel>Make Prediction</BtnLabel>
           </Btn>
         </Container>

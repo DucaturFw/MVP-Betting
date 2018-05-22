@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 // import theme from './styles/theme';
-import './styles/base.css';
+import './styles/base.less';
 import './styles/styles.less';
 
 import Back from './components/elements/background';

@@ -1,3 +1,12 @@
+@import "bank.less";
+@import "header.less";
+@import "bears.less";
+@import "vs.less";
+@import "prediction.less";
+
+
+@mobile-width: 800px;
+
 html {
     margin: 0;
     padding: 0;
@@ -6,17 +15,20 @@ html {
 body {
     margin: 0;
     background: rgba(255, 255, 255, 1.0);
+    font-family: 'Montserrat-Bold', Helvetica, Arial, serif;
 }
 
 .mvp-new {
-    width: 100%;
-    min-width: 1440px;
+    width: 1440px;
     height: 1150px;
-    min-height: 1000px;
-    overflow: hidden;
-    margin: 0;
-    /* background-color: rgba(255, 255, 255, 1.0) */
+    margin: 0 auto;
     background-color: #1d1f35;
+    
+    @media screen and (max-width: @mobile-width) {
+        width: 100%;
+        height: 1000px;
+        overflow: hidden;
+    }
 }
 
 a {
@@ -33,16 +45,15 @@ div {
     position:relative; 
     margin:auto;
     box-shadow: 0px 0px 15px 20px rgba(0,0,0,0.15);
+
+    @media screen and (max-width: @mobile-width) {
+      width: 100%;
+      height: 1000px;
+    }
 }
 
-.mvp-new .b-g {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 0;
-    height: 1600px;
-    width: 1440px;
+.mvp-new .background {
     position: absolute;
-    margin: 0;
-    left: 0
 }
 
 .mvp-new .oval {
@@ -51,7 +62,6 @@ div {
     height: 1068px;
     width: 1647px;
     position: absolute;
-    margin: 0;
     left: -104px;
     opacity: .57
 }
@@ -64,18 +74,17 @@ div {
     position: absolute;
     margin: 0;
     left: 76px;
-    opacity: .65
+    opacity: .65;
+
+    @media screen and (max-width: @mobile-width) {
+      left: -200px;
+      top: 200px;
+      width: 200%;
+      height: auto;
+    }
 }
 
-.mvp-new .bull-and-bear {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 10px;
-    height: 782px;
-    width: 1561px;
-    position: absolute;
-    margin: 0;
-    left: -44px
-}
+.mvp-new .bull-and-bear { }
 
 .mvp-new .bull-and-bear .page1 {
     background-color: rgba(255, 255, 255, 0.0);
@@ -84,7 +93,7 @@ div {
     width: 608px;
     position: absolute;
     margin: 0;
-    left: 876px;
+    left: 826px;
     opacity: .23
 }
 
@@ -106,7 +115,12 @@ div {
     width: 293px;
     position: absolute;
     margin: 0;
-    left: 0
+    left: 0;
+
+    @media screen and (max-width: @mobile-width) {
+      width: 20px;
+      height: auto;
+    }
 }
 
 .mvp-new .bull-and-bear .page1-copy .group42 {
@@ -287,350 +301,6 @@ div {
     position: absolute;
     margin: 0;
     left: 419px
-}
-
-.mvp-new .bull-and-bear .bull {
-    position: absolute;
-    top: 208px;
-    height: auto;
-    width: 594px;
-    left: 0;
-}
-
-.mvp-new .bull-and-bear .bear {
-    position: absolute;
-    top: 244px;
-    left: 967px;
-    width: 554px;
-    height: auto;
-}
-
-.mvp-new .bull-and-bear .page11 {
-    position: absolute;
-    top: 205px;
-    left: 531px;
-}
-
-.mvp-new .bull-and-bear .page11 .fill11 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 150px;
-    height: 78px;
-    width: 125px;
-    position: absolute;
-    margin: 0;
-    left: 51px;
-    opacity: .47
-}
-
-.mvp-new .bull-and-bear .page11 .fill3 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 27px;
-    height: 278px;
-    width: 329px;
-    position: absolute;
-    margin: 0;
-    left: 80px;
-    opacity: .47
-}
-
-.mvp-new .bull-and-bear .page11 .group7 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 0;
-    height: 145px;
-    width: 236px;
-    position: absolute;
-    margin: 0;
-    left: 185px;
-    opacity: .47
-}
-
-.mvp-new .bull-and-bear .page11 .fill8 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 118px;
-    height: 58px;
-    width: 96px;
-    position: absolute;
-    margin: 0;
-    left: 305px;
-    opacity: .47
-}
-
-.mvp-new .bull-and-bear .page11 .fill10 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 170px;
-    height: 59px;
-    width: 96px;
-    position: absolute;
-    margin: 0;
-    left: 224px;
-    opacity: .47
-}
-
-.mvp-new .bull-and-bear .page11 .fill121 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 58px;
-    height: 132px;
-    width: 216px;
-    position: absolute;
-    margin: 0;
-    left: 310px;
-    opacity: .47
-}
-
-.mvp-new .bull-and-bear .page11 .fill141 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 194px;
-    height: 55px;
-    width: 92px;
-    position: absolute;
-    margin: 0;
-    left: 275px;
-    opacity: .47
-}
-
-.mvp-new .bull-and-bear .page11 .fill16 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 252px;
-    height: 84px;
-    width: 139px;
-    position: absolute;
-    margin: 0;
-    left: 100px;
-    opacity: .47
-}
-
-.mvp-new .bull-and-bear .page11 .fill18 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 20px;
-    height: 201px;
-    width: 179px;
-    position: absolute;
-    margin: 0;
-    left: 152px;
-    opacity: .47
-}
-
-.mvp-new .bull-and-bear .page11 .fill20 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 134px;
-    height: 111px;
-    width: 179px;
-    position: absolute;
-    margin: 0;
-    left: 0;
-    opacity: .47
-}
-
-.mvp-new .bull-and-bear .page11 .fill251 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 33px;
-    height: 201px;
-    width: 179px;
-    position: absolute;
-    margin: 0;
-    left: 138px
-}
-
-.mvp-new .bull-and-bear .page11 .fill27 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 26px;
-    height: 192px;
-    width: 170px;
-    position: absolute;
-    margin: 0;
-    left: 156px
-}
-
-.mvp-new .bears-title {
-    top: 206px;
-    position: absolute;
-    left: 882px;
-    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
-    font-size: 48.0px;
-    color: rgba(208, 1, 27, 1.0);
-    line-height: 48.0px;
-    width: 167px;
-}
-
-.mvp-new .bears-count {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 259px;
-    width: 167px;
-    position: absolute;
-    left: 883px;
-    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
-    font-size: 64.0px;
-    color: rgba(255, 255, 255, 1.0);
-    text-align: center;
-    line-height: 48.0px
-}
-
-.mvp-new .bulls-title {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 446px;
-    left: 440px;
-    height: auto;
-    width: auto;
-    position: absolute;
-    margin: 0;
-    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
-    font-size: 48.0px;
-    color: rgba(126, 210, 33, 1.0);
-    text-align: center;
-    line-height: 48.0px
-}
-
-.mvp-new .bulls-count {
-    position: absolute;
-    top: 495px;
-    left: 442px;
-    height: auto;
-    width: 160px;
-    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
-    font-size: 64.0px;
-    color: rgba(255, 255, 255, 1.0);
-    text-align: center;
-    line-height: 48.0px;
-}
-
-.mvp-new .t-itle {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 42px;
-    height: 51px;
-    width: 1292px;
-    position: absolute;
-    margin: 0;
-    left: 74px;
-}
-
-.mvp-new .t-itle .group8 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 0;
-    height: 51px;
-    width: 1292px;
-    position: relative;
-    margin: 0;
-    left: 0
-}
-
-.mvp-new .t-itle .group8 .the-most-accurate-pr {
-    position: absolute;
-    top: 0;
-    left: -1px;
-    font-size: 36.0px;
-    color: rgba(255, 255, 255, 1.0);
-    text-align: center;
-}
-
-.mvp-new .t-itle .group8 .n-av {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 0;
-    height: 51px;
-    width: 185px;
-    position: absolute;
-    margin: 0;
-    left: 1052px
-}
-
-.mvp-new .t-itle .group8 .n-av .ducatur-logo {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 0;
-    height: 51px;
-    width: 185px;
-    position: relative;
-    margin: 0;
-    left: 0
-}
-
-.mvp-new .t-itle .group8 .n-av .ducatur-logo .fill13 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 18px;
-    height: 21px;
-    width: 20px;
-    position: absolute;
-    margin: 0;
-    left: 49px
-}
-
-.mvp-new .t-itle .group8 .n-av .ducatur-logo .fill31 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 18px;
-    height: 21px;
-    width: 20px;
-    position: absolute;
-    margin: 0;
-    left: 70px
-}
-
-.mvp-new .t-itle .group8 .n-av .ducatur-logo .fill51 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 17px;
-    height: 22px;
-    width: 19px;
-    position: absolute;
-    margin: 0;
-    left: 90px
-}
-
-.mvp-new .t-itle .group8 .n-av .ducatur-logo .fill71 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 18px;
-    height: 21px;
-    width: 24px;
-    position: absolute;
-    margin: 0;
-    left: 109px
-}
-
-.mvp-new .t-itle .group8 .n-av .ducatur-logo .fill9 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 18px;
-    height: 21px;
-    width: 17px;
-    position: absolute;
-    margin: 0;
-    left: 127px
-}
-
-.mvp-new .t-itle .group8 .n-av .ducatur-logo .fill111 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 18px;
-    height: 21px;
-    width: 20px;
-    position: absolute;
-    margin: 0;
-    left: 146px
-}
-
-.mvp-new .t-itle .group8 .n-av .ducatur-logo .group15 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 18px;
-    height: 21px;
-    width: 19px;
-    position: absolute;
-    margin: 0;
-    left: 166px
-}
-
-.mvp-new .t-itle .group8 .n-av .ducatur-logo .group181 {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 0;
-    height: 51px;
-    width: 36px;
-    position: absolute;
-    margin: 0;
-    left: 0
-}
-
-.mvp-new .t-itle .group8 .menu-icon {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 18px;
-    height: 18px;
-    width: 24px;
-    position: absolute;
-    margin: 0;
-    left: 1268px;
-    cursor: pointer;
 }
 
 .mvp-new .beting-line {
@@ -2851,94 +2521,6 @@ div {
     text-align: center;
     letter-spacing: .14px;
     line-height: 14.0px
-}
-
-.mvp-new .bank {
-    position: absolute;
-    top: 112px;
-    left: 499px;
-}
-
-.mvp-new .bank .win-copy {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 11px;
-    height: auto;
-    width: auto;
-    position: absolute;
-    margin: 0;
-    left: 0;
-    font-family: 'Montserrat-Bold', Helvetica, Arial, serif;
-    font-size: 64.0px;
-    color: rgba(0, 0, 0, 1.0);
-    text-align: left
-}
-
-.mvp-new .bank .a153-btc {
-    top: 0;
-    height: auto;
-    width: 400px;
-    position: absolute;
-    left: 174px;
-    font-family: 'Montserrat-Bold', Helvetica, Arial, serif;
-    font-size: 64.0px;
-    color: rgba(255, 255, 255, 1.0);
-}
-
-.mvp-new .bank .a153-btc-copy {
-    top: 10px;
-    height: auto;
-    width: 400px;
-    position: absolute;
-    left: 170px;
-    font-family: 'Montserrat-Bold', Helvetica, Arial, serif;
-    font-size: 64.0px;
-    color: rgba(0, 0, 0, 1.0);
-}
-
-.mvp-new .bank .w-in {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 1px;
-    height: auto;
-    width: auto;
-    position: absolute;
-    margin: 0;
-    left: 4px;
-    font-family: 'Montserrat-Bold', Helvetica, Arial, serif;
-    font-size: 64.0px;
-    color: rgba(175, 132, 255, 1.0);
-    text-align: left
-}
-
-.mvp-new .button {
-    position: absolute;
-    top: 567px;
-    left: 564px;
-    height: 76px;
-    width: 312px;
-}
-
-.mvp-new .button .b-t-noutline {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 0;
-    height: 76px;
-    width: 312px;
-    position: absolute;
-    margin: 0;
-    left: 0
-}
-
-.mvp-new .button .make-prediction {
-    background-color: rgba(255, 255, 255, 0.0);
-    top: 24px;
-    height: auto;
-    width: auto;
-    position: absolute;
-    margin: 0;
-    left: 35px;
-    font-family: 'San Francisco', Helvetica, Arial, serif;
-    font-size: 24.0px;
-    color: rgba(248, 251, 255, 1.0);
-    text-align: center
 }
 
 .anima-animate-appear {

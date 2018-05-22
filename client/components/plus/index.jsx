@@ -39,6 +39,16 @@ const Container = styled.div`
   top: 790px;
   width: 100%;
   font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
+
+  @media screen and (max-width: 800px) {
+    display: grid;
+    top: 550px;
+    left: 0;
+    padding-left: 20px;
+
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
 `;
 
 const Item = styled.div`

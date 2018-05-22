@@ -1,0 +1,47 @@
+.button {
+    height: 76px;
+    width: 312px;
+}
+
+.button .make-prediction {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 24px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 35px;
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 24.0px;
+    color: rgba(248, 251, 255, 1.0);
+    text-align: center
+}
+
+.button.btn-prediction{
+    position: absolute;
+    top: 567px;
+    left: 564px;
+
+    @media screen and (max-width: @mobile-width) {
+      display: none;
+    }
+}
+
+.button .bordered {
+    font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
+    font-size: 24px;
+    color: white;
+  
+    text-align: center;
+    padding: 20px;
+  
+    cursor: pointer;
+  
+    @media screen and (max-width: @mobile-width) {
+      font-size: 7vw;
+  
+      background-size: 280px 60px;
+      background-repeat: no-repeat no-repeat;
+      background-position: center center;
+    }
+}

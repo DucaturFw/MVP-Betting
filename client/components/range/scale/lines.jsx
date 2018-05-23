@@ -66,7 +66,7 @@ export default class Scale extends Component {
     const results = [];
 
     for (let i = 0; i <= 8; i++) {
-      results.push(<Point key={i} src="./images/mvp  newpath  3.png" style={{ left: 70 + RANGE * i }} />);
+      results.push(<Point key={i} src="./images/mvp  newpath  3.png" style={{ left: 75 + RANGE * i }} />);
     }
 
     return results;
@@ -108,7 +108,7 @@ export default class Scale extends Component {
   processToken({ token, idx, key }) {
     let { curr } = this.props;
 
-    let sign = curr >= key ? -1 : 1,
+    let sign = key >= curr ? -1 : 1,
       startY = sign > 0 ? 12 : -1,
       x = (key - 6000) / 1000 * 150 + 84,
       y = startY + 10 * idx * sign;
@@ -206,10 +206,10 @@ const Token = styled.div`
   width: 14px;
   height: 10px;
 
-  background-color: ${props => (props.type !== true ? 'rgba(76, 215, 31, 0.78)' : 'rgba(215, 31, 31, 0.78)')};
+  background-color: ${props => (props.type == true ? 'rgba(76, 215, 31, 0.78)' : 'rgba(215, 31, 31, 0.78)')};
   border-style: solid;
   border-width: 1px;
-  border-color: ${props => (props.type !== true ? 'rgba(76, 215, 31, 0.61)' : 'rgba(215, 31, 31, 0.61)')};
+  border-color: ${props => (props.type == true ? 'rgba(76, 215, 31, 0.61)' : 'rgba(215, 31, 31, 0.61)')};
 `;
 
 const Tooltip = styled.div`

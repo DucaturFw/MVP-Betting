@@ -11,7 +11,7 @@ export default function({ tokens, curr }) {
   const bears = flatRanges.filter(price => price < curr).length;
   const bulls = flatRanges.filter(price => price >= curr).length;
   const sum = tokens.reduce((s, item) => s.add(new BN(item.payment, 10)), new BN(0, 10));
-  const inEth = Wallet.fromWei(sum);
+  const inEth = Wallet.fromWei(sum.toString());
 
   return (
     <div>

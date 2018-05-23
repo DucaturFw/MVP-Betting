@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/DucaturFw/Betting/issues"
   },
-  "homepage": "https://github.com/DucaturFw/Betting#readme",
+  "homepage": "https://ducatur.com/mvp",
   "dependencies": {
     "autoprefixer": "^8.1.0",
     "axios": "^0.18.0",

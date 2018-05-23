@@ -20,8 +20,8 @@ function ensureSlash(path, needsSlash) {
 }
 
 const envPublicUrl = process.env.PUBLIC_URL;
-// const getPublicUrl = appPackageJson => envPublicUrl || require(appPackageJson).homepage;
-const getPublicUrl = appPackageJson => '';
+const getPublicUrl = appPackageJson => envPublicUrl || require(appPackageJson).homepage;
+// const getPublicUrl = appPackageJson => '';
 
 function getServedPath(appPackageJson) {
   const publicUrl = getPublicUrl(appPackageJson);

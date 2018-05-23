@@ -106,18 +106,19 @@ export default class Scale extends Component {
   }
 
   processToken({ token, idx, key }) {
-    let { curr } = this.props;
+    let curr = parseInt(this.props.curr, 10),
+      price = parseInt(key, 10);
 
-    let sign = key >= curr ? -1 : 1,
+    let sign = price >= curr ? -1 : 1,
       startY = sign > 0 ? 12 : -1,
-      x = (key - 6000) / 1000 * 150 + 84,
+      x = (price - 6000) / 1000 * 150 + 84,
       y = startY + 10 * idx * sign;
 
     return (
       <Token
         key={`${token.dateBuy}${key}`}
         style={{ top: y, left: x }}
-        type={key >= curr}
+        type={price >= curr}
         onMouseEnter={this.mouseEnter.bind(this, { x, y, token })}
         onMouseLeave={this.mouseEnter.bind(this, {})}
       />

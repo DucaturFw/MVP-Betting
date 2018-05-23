@@ -1,3 +1,5 @@
 {
-    "contractAddress": "0xf3b42626f3d2087eb7c72932a610768f39820c59"
+    "contractAddress": "0xf3b42626f3d2087eb7c72932a610768f39820c59",
+    "testrpc": "127.0.0.1"
 }
+

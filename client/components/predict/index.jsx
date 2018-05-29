@@ -127,7 +127,6 @@ export default class Predict extends Component {
             </div>
           )}
           <Btn onClick={this.handlePredict} hide={this.state.loading} available={this.state.available}>
-            <Img className="predict" src="./images/btn.png" available={this.state.available} />
             <BtnLabel>Make Prediction</BtnLabel>
           </Btn>
         </Container>
@@ -137,9 +136,8 @@ export default class Predict extends Component {
 }
 
 const Wrapper = styled(Popup)`
-  height: 584px;
-  width: 530px;
   background-color: rgba(255, 255, 255, 1);
+  padding: 20px 40px;
   border-radius: 17px;
   overflow: hidden;
 `;
@@ -196,13 +194,15 @@ const Btn = styled.div`
 `;
 
 const BtnLabel = styled.div`
+  display: inline-block;
+  background-image: linear-gradient(to bottom right, #7956ec 0%, #2fb9f8 100%);
   font-size: 18px;
-  letter-spacing: 0.86px;
-  line-height: 22px;
 
-  position: absolute;
-  top: 15px;
-  left: 195px;
+  padding: 10px;
+  border-radius: 4px;
+
+  width: 200px;
+  text-align: center;
   color: white;
 `;
 

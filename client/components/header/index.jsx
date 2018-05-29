@@ -38,57 +38,35 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div className="header">
-        <div className="the-most-accurate-pr">The most accurate prediction always wins!</div>
-        <div className="nav">
-          <div className="ducatur-logo">
-            <img className="logo" src="./images/NAV.png" />
-          </div>
+      <header>
+        <div className="logo">
+          <img src="./images/logo.svg" alt="logo" />
         </div>
-        <img onClick={this.handleMenu} className="menu-icon" src="./images/mvp  newmenu icon.png" />
-        {this.state.showMenu && (
-          <Menu>
-            <Item onClick={this.handleBids} disabled={!this.hasAccount()}>
-              Bids list
-            </Item>
-            <Item onClick={this.handleOracles}>Oracle list</Item>
-            <Item onClick={this.handleTerms}>Terms of use</Item>
-            <Item onClick={this.handleFAQ}>FAQ</Item>
-          </Menu>
-        )}
-      </div>
+        <div className="title-name">The most accurate prediction always wins!</div>
+        <div onClick={this.handleMenu} className="menu-logo">
+          <img src="./images/menu-icon.png" className="mobile_menu_click" alt="menu" />
+        </div>
+        <Menu className="list-menu" showMenu={this.state.showMenu}>
+          <ul className="nav-menu">
+            <li className="nav-select bids-list" onClick={this.handleBids} disabled={!this.hasAccount()}>
+              <a href="#">Bids List</a>
+            </li>
+            <li className="nav-select oracles-list" onClick={this.handleOracles}>
+              <a href="#">Oracles List</a>
+            </li>
+            <li className="nav-select faq" onClick={this.handleFAQ}>
+              <a href="#">FAQ</a>
+            </li>
+            <li className="nav-select terms" onClick={this.handleTerms}>
+              <a href="#">Our terms</a>
+            </li>
+          </ul>
+        </Menu>
+      </header>
     );
   }
 }
 
-const Menu = styled.div`
-  position: absolute;
-
-  width: 200px;
-  padding: 10px;
-
-  background: white;
-
-  right: 0;
-  top: 60px;
-  z-index: 1;
-
-  background-image: linear-gradient(-90deg, #3023ae 0%, #c86dd7 100%);
-  border-radius: 6px;
-
-  animation: showMenu 0.25s cubic-bezier(0.06, 0.67, 0.37, 0.99) forwards;
-`;
-
-const Item = styled.div`
-  padding: 15px 10px;
-  color: ${props => (props.disabled ? '#999' : 'white')};
-
-  font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
-
-  &:hover {
-    opacity: 0.56;
-    background: #3023ae;
-    border-radius: 6px;
-    cursor: pointer;
-  }
+const Menu = styled.ul`
+  display: ${props => (props.showMenu ? 'block' : 'none')};
 `;

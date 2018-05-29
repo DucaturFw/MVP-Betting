@@ -45,8 +45,4 @@ export default class Popup extends Component {
   }
 }
 
-const Wrapper = styled.div`
-  opacity: 0;
-  transform: translateY(2.4rem);
-  animation: showUp 0.25s cubic-bezier(0.06, 0.67, 0.37, 0.99) forwards;
-`;
+const Wrapper = styled.div``;

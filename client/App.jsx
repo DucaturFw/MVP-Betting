@@ -3,15 +3,12 @@ import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 // import theme from './styles/theme';
 import './styles/base.less';
-import './styles/styles.less';
 
 import Back from './components/elements/background';
 
 import Hub from './components/inform';
-import Main from './components/main';
 import Header from './components/header';
 import Counters from './components/counters';
-import Prediction from './components/prediction';
 import Range from './components/range';
 import Plus from './components/plus';
 
@@ -28,7 +25,7 @@ export default class App extends Component {
     super(opts);
 
     this.state = {
-      predict: false,
+      predict: true,
       bids: false,
       terms: false,
       oracles: false,
@@ -43,7 +40,14 @@ export default class App extends Component {
   componentDidMount() {
     wallet.init().then(data => {
       let status = wallet.getStatus();
-      this.setState({ loading: false, data, status });
+
+      console.log('data', data);
+
+      this.setState({
+        loading: false,
+        data,
+        status
+      });
     });
     wallet.subscription(this.update.bind(this));
   }
@@ -53,6 +57,7 @@ export default class App extends Component {
   }
 
   onMenuClick = e => {
+    console.log('input');
     this.setState(state => ({
       ...state,
       [e]: !state[e]
@@ -60,22 +65,19 @@ export default class App extends Component {
   };
 
   render() {
-    // console.log(this.state);
+    console.log('state', this.state);
 
     if (this.state.loading) {
-      return <Main>Loading...</Main>;
+      return <div>Loading...</div>;
     }
 
     return (
       <div>
-        <Hub status={this.state.status} />
-        <Main>
-          <Header onMenuClick={this.onMenuClick} />
-          <Counters tokens={this.state.data.tokens} curr={this.state.data.currRate} />
-          <Prediction onPredictClick={this.handlePredict} />
-          <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} />
-          <Plus />
-        </Main>
+        {/* <Hub status={this.state.status} /> */}
+        <Header onMenuClick={this.onMenuClick} />
+        <Counters tokens={this.state.data.tokens} curr={this.state.data.currRate} onPredictClick={this.handlePredict} />
+        {/* <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} /> */}
+        <Plus />
         {this.state.oracles && (
           <Back>
             <Oracles onClose={this.onMenuClick} />

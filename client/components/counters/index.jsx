@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 import Wallet from './../../models/wallet';
 
-export default function({ tokens, curr }) {
+export default function({ tokens, curr, onPredictClick }) {
   let ranges = tokens.map(token => _.range(token.betFrom, token.betTo, 100));
   let flatRanges = _.flatten(ranges);
 
@@ -13,24 +13,47 @@ export default function({ tokens, curr }) {
   const sum = tokens.reduce((s, item) => s.add(new BN(item.payment, 10)), new BN(0, 10));
   const inEth = Wallet.fromWei(sum.toString());
 
+  // console.log(onPredictClick);
+
   return (
     <div>
-      <div className="bank">
-        <div className="shadow">
-          <span className="win">WIN</span>
-          <span className="text">&nbsp;&nbsp;{inEth} ETH</span>
+      <div className="win">
+        <p>
+          win&nbsp;
+          <span>{inEth}</span> eth
+        </p>
+      </div>
+      <div className="row title-result mb">
+        <div className="col-6 col-md-4 bull ">
+          <img src="./images/bull.png" alt="" />
+          <p className="name">bulls</p>
+          <div className="square">{bulls}</div>
         </div>
-
-        <div className="title">
-          <span className="win">WIN</span>
-          <span className="text">&nbsp;&nbsp;{inEth} ETH</span>
+        <div className="col-sm-4 vs">
+          <div className="row">
+            <div className="col">
+              <p className="name">bulls</p>
+              <div className="square">{bulls}</div>
+            </div>
+            <div className="col-sm-1" />
+            <div className="col">
+              <p className="name">bears</p>
+              <div className="square">{bears}</div>
+            </div>
+          </div>
+          <div onClick={onPredictClick} className="bottom-bet">
+            <div>Make prediction</div>
+          </div>
+        </div>
+        <div className="col-6 col-md-4 bear">
+          <img src="./images/bear.png" alt="" />
+          <p className="name">bears</p>
+          <div className="square">{bears}</div>
+        </div>
+        <div className="bottom-bet" onClick={onPredictClick}>
+          <div>Make prediction</div>
         </div>
       </div>
-
-      <div className="bears-title">BEARS</div>
-      <div className="bears-count">{bears}</div>
-      <div className="bulls-title">BULLS</div>
-      <div className="bulls-count">{bulls}</div>
     </div>
   );
 }

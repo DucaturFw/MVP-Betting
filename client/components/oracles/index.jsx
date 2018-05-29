@@ -20,6 +20,7 @@ export default class Oracles extends Component {
 
   componentDidMount() {
     Wallet.getPrices().then(data => {
+      // console.log('prices', data);
       this.setState({ list: data });
     });
   }
@@ -28,83 +29,55 @@ export default class Oracles extends Component {
     return this.state.list.map((item, key) => {
       const idx = parseInt(item.event['6']);
       return (
-        <Row key={key}>
-          <Cell>{format(item.block.timestamp * 1000, FORMAT)}</Cell>
-          <Cell mark={idx === 0}>{item.event['1']}</Cell>
-          <Cell mark={idx === 1}>{item.event['2']}</Cell>
-          <Cell mark={idx === 2}>{item.event['3']}</Cell>
-          <Cell mark={idx === 3}>{item.event['4']}</Cell>
-          <Cell mark={idx === 4}>{item.event['5']}</Cell>
-          <Cell>{item.event['7']}</Cell>
-        </Row>
+        <div className="row main" key={key}>
+          <Cell className="col">{format(item.block.timestamp * 1000, FORMAT)}</Cell>
+          <Cell className="col" mark={idx === 0}>
+            {item.event['1']}
+          </Cell>
+          <Cell className="col" mark={idx === 1}>
+            {item.event['2']}
+          </Cell>
+          <Cell className="col" mark={idx === 2}>
+            {item.event['3']}
+          </Cell>
+          <Cell className="col" mark={idx === 3}>
+            {item.event['4']}
+          </Cell>
+          <Cell className="col" mark={idx === 4}>
+            {item.event['5']}
+          </Cell>
+          <Cell className="col">{item.event['7']}</Cell>
+        </div>
       );
     });
   }
 
   render() {
     return (
-      <Wrapper onClose={this.props.onClose} name="oracles">
-        <Title>Oracle list</Title>
-        <Container>
-          <Table>
-            <thead>
-              <Row>
-                <HeadCell>Date</HeadCell>
-                <HeadCell>Stock A</HeadCell>
-                <HeadCell>Stock B</HeadCell>
-                <HeadCell>Stock C</HeadCell>
-                <HeadCell>Stock D</HeadCell>
-                <HeadCell>Stock E</HeadCell>
-                <HeadCell>Median</HeadCell>
-              </Row>
-            </thead>
-            <tbody>{this.items}</tbody>
-          </Table>
-        </Container>
+      <Wrapper onClose={this.props.onClose} name="oracles" className="oracles-list toggleable">
+        <h1>Oracle List</h1>
+        <div className="row main">
+          <div className="col">Date</div>
+          <div className="col">Stock A</div>
+          <div className="col">Stock B</div>
+          <div className="col">Stock C</div>
+          <div className="col">Stock D</div>
+          <div className="col">Stock E</div>
+          <div className="col">Median</div>
+        </div>
+        {this.items}
       </Wrapper>
     );
   }
 }
 
 const Wrapper = styled(Popup)`
-  background-color: rgba(255, 255, 255, 1);
-  height: 584px;
-  width: 955px;
-  border-radius: 17px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 `;
 
-const Title = styled.div`
-  height: auto;
-  width: 240px;
-  margin: 50px auto 0;
-  font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
-  font-size: 36px;
-  color: rgba(12, 38, 74, 1);
-  text-align: center;
-`;
-
-const Container = styled.div`
-  padding: 30px;
-  overflow-y: auto;
-  font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
-`;
-
-const Table = styled.table`
-  width: 100%;
-`;
-
-const Row = styled.tr`
-  padding: 5px;
-`;
-
-const HeadCell = styled.td`
-  padding: 10px;
-`;
-
-const Cell = styled(HeadCell)`
+const Cell = styled.div`
   border-bottom: 1px solid #eee;
 
   text-decoration: ${props => (props.mark ? 'line-through' : 'none')};

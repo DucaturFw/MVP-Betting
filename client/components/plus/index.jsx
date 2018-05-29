@@ -3,61 +3,59 @@ import styled from 'styled-components';
 
 export default function({}) {
   return (
-    <Container>
-      <Item>
-        <img src="./images/step1.png" />
-        <Title>1. Choose Condition of your Prediction</Title>
-      </Item>
-      <Item>
-        <img src="./images/step2.png" />
-        <Title>2. Write Prediction and Bid Price</Title>
-      </Item>
-      <Item>
-        <img src="./images/step3.png" />
-        <Title>3. Pay by MetaMask your Bid Price</Title>
-      </Item>
-      <Item>
-        <img src="./images/step4.png" />
-        <Title>4. You successful Place the Bid</Title>
-      </Item>
-      <Item>
-        <img src="./images/step5.png" />
-        <Title>5. Wait for prediction Date</Title>
-      </Item>
-      <Item>
-        <img src="./images/step6.png" />
-        <Title>6. Withdraw your Reward if you Win</Title>
-      </Item>
-    </Container>
+    <footer>
+      <h2 className="gide">Steps Guide</h2>
+      <div className="row title-result">
+        <div className="col-lg-2 col-md-4 col-4 marg">
+          <img src="./images/guide/choose.png" alt="" />
+          <p className="desc">
+            1. Choose Condition
+            <br /> of your Prediction
+          </p>
+        </div>
+        <div className="col-md-4 col-4 col-lg-2 marg">
+          <img src="./images/guide/prediction.png" alt="" />
+          <p className="desc">
+            2. Write Prediction
+            <br /> and Bid Price
+          </p>
+        </div>
+        <div className="col-md-4 col-4 col-lg-2 marg">
+          <img src="./images/guide/btc-cash.png" alt="" />
+          <p className="desc">
+            3. Pay by MetaMask
+            <br /> your Bid Price
+          </p>
+        </div>
+        <div className="col-md-4 col-4 col-lg-2 marg">
+          <img src="./images/guide/successful.png" alt="" />
+          <p className="desc">
+            4. You Successful
+            <br /> Place the Bid
+          </p>
+        </div>
+        <div className="col-md-4 col-4 col-lg-2 marg">
+          <img src="./images/guide/wait.png" alt="" />
+          <p className="desc">
+            5. Wait for
+            <br /> Prediction Date
+          </p>
+        </div>
+        <div className="col-md-4 col-4 col-lg-2 marg">
+          <img src="./images/guide/btc-cash.png" alt="" />
+          <p className="desc">
+            6. Withdraw your
+            <br /> Reward if you Win
+          </p>
+        </div>
+        <div className="your-prediction">
+          You always can see your current predictions in
+          <span className="bids-list">Bids List</span>
+          <div className="logo2">
+            <img src="./images/logo.svg" alt="logo" />
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }
-
-const Container = styled.div`
-  display: flex;
-  justify-content: space-around;
-  position: absolute;
-  top: 790px;
-  width: 100%;
-  font-family: 'Montserrat-Regular', Helvetica, Arial, serif;
-
-  @media screen and (max-width: 800px) {
-    display: grid;
-    top: 550px;
-    left: 0;
-    padding-left: 20px;
-
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
-`;
-
-const Item = styled.div`
-  width: 160px;
-  text-align: center;
-`;
-
-const Title = styled.div`
-  margin-top: 15px;
-  font-size: 16px;
-  color: white;
-`;

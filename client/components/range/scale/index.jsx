@@ -15,7 +15,11 @@ export default function({ tokens, curr }) {
 
 const Wrap = styled.div`
   position: relative;
-  @media screen and (max-width: 800px) {
+  height: 120px;
+  width: 1400px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;

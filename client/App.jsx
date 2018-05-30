@@ -78,7 +78,7 @@ export default class App extends Component {
         <Hub status={this.state.status} />
         <Header onMenuClick={this.onMenuClick} />
         <Counters tokens={this.state.data.tokens} curr={this.state.data.currRate} onPredictClick={this.handlePredict} />
-        {/* <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} /> */}
+        <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} />
         <Plus />
         {this.state.oracles && (
           <Back>

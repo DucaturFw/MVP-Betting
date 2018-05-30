@@ -66,7 +66,7 @@ export default class Scale extends Component {
     const results = [];
 
     for (let i = 0; i <= 8; i++) {
-      results.push(<Point key={i} src="./images/mvp  newpath  3.png" style={{ left: 75 + RANGE * i }} />);
+      results.push(<Point key={i} src="./images/point.png" style={{ left: 75 + RANGE * i }} />);
     }
 
     return results;
@@ -80,7 +80,7 @@ export default class Scale extends Component {
         results.push(
           <Delimeter
             key={`${j}${i}`}
-            src="./images/mvp  newline 2  35.png"
+            src="./images/delimeter.png"
             style={{ left: START_POINT + STEP * i + RANGE * j, top: j < 4 ? 10 : 0 }}
           />
         );
@@ -163,9 +163,9 @@ export default class Scale extends Component {
   render() {
     return (
       <Container className={this.props.className}>
-        <PreLine src="./images/mvp  newline  1.png" />
-        <Line src="./images/mvp  newline.png" />
-        <PreLine src="./images/mvp  newline  1.png" />
+        <PreLine src="./images/dashed.png" />
+        <Line src="./images/line.png" />
+        <PreLine src="./images/dashed.png" />
         {this.tokens}
         {this.points}
         {this.negativeDel}

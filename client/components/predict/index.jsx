@@ -51,7 +51,7 @@ export default class Predict extends Component {
 
     this.setState({
       difference,
-      text: `Your range is from:${from} to ${+from + +difference}`
+      text: `Your available range is from:${from} to ${+from + +difference}`
     });
   }
 
@@ -115,13 +115,11 @@ export default class Predict extends Component {
               </Item>
               <Item>
                 <Label>From</Label>
-                <Input name="from" value={this.state.from} onChange={this.handleInput} />
-                <Dollor>$</Dollor>
+                <InputDollar name="from" value={this.state.from} onChange={this.handleInput} />
               </Item>
               <Item>
                 <Label>To</Label>
-                <Input name="to" value={this.state.to} onChange={this.handleInput} />
-                <Dollor>$</Dollor>
+                <InputDollar name="to" value={this.state.to} onChange={this.handleInput} />
               </Item>
               <StyledText>{this.state.text}</StyledText>
             </div>
@@ -168,21 +166,29 @@ const Label = styled.div`
 `;
 
 const Input = styled.input`
-  box-sizing: border-box;
-  width: 250px;
-  padding: 10px 12px;
-  border-radius: 5px;
-  outline: none;
-  border: 1px solid #aaa;
-`;
-const InputSelect = Input.withComponent('select');
+  height: 40px;
+  width: 240px;
 
-const Dollor = styled.div`
-  position: absolute;
-  top: 35px;
-  right: 160px;
-  font-size: 18px;
-  color: rgba(49, 53, 65, 1);
+  outline: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 19px 5% 19px 12px;
+  font-size: 13px;
+  color: #222051;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 3px rgba(0, 153, 250, 0.15);
+  border-radius: 4px;
+  border: 1px solid #0099fa;
+  background-color: #ffffff;
+`;
+
+const InputDollar = styled(Input)`
+  background-image: url(./images/dollar.png);
+  background-repeat: no-repeat;
+  background-position: 220px;
 `;
 
 const Btn = styled.div`
@@ -194,16 +200,18 @@ const Btn = styled.div`
 `;
 
 const BtnLabel = styled.div`
-  display: inline-block;
-  background-image: linear-gradient(to bottom right, #7956ec 0%, #2fb9f8 100%);
-  font-size: 18px;
-
-  padding: 10px;
-  border-radius: 4px;
-
-  width: 200px;
+  width: 218px;
+  height: 53px;
+  border-radius: 9px;
+  background-image: linear-gradient(135deg, #3023ae 0%, #c86dd7 100%);
   text-align: center;
-  color: white;
+  color: #ffffff;
+  font-family: 'Montserrat Medium';
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.86px;
+  margin: 53px auto 54px auto;
+  padding: 14px;
 `;
 
 const Text = styled.div`

@@ -75,6 +75,7 @@ const Wrapper = styled(Popup)`
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding-bottom: 30px;
 `;
 
 const Cell = styled.div`

@@ -9,30 +9,31 @@ const FORMAT = 'D MMMM YYYY';
 
 export default function({ bets }) {
   const items = bets.map((bet, idx) => {
+    console.log('bet', bet);
     return (
-      <RowTable key={idx}>
-        <Col1>
+      <div className="row rowe" key={idx}>
+        <div className="col  colum high">
           1 Bitcoin = ${bet.betFrom} - ${bet.betTo}
-        </Col1>
-        <Col2>{format(bet.dateBuy * 1e3, FORMAT)}</Col2>
-        <Col3>{Wallet.fromWei(bet.price)} ETH</Col3>
-        <Col4>{bet.result}</Col4>
-        <Col5>
+        </div>
+        <div className="col  colum high">{format(bet.dateBuy * 1e3, FORMAT)}</div>
+        <div className="col  colum ">{Wallet.fromWei(bet.price)} ETH</div>
+        <div className="col  colum ">{bet.result}</div>
+        <div className="col  colum with">
           <Btn onClick={Wallet.redeemToken.bind(Wallet, bet.id)}>withdraw</Btn>
-        </Col5>
-      </RowTable>
+        </div>
+      </div>
     );
   });
 
   return (
     <div>
-      <RowHeader>
-        <Col1>YouBid</Col1>
-        <Col2>Date</Col2>
-        <Col3>Bet</Col3>
-        <Col4>Result</Col4>
-        <Col5>Status</Col5>
-      </RowHeader>
+      <div className="row rowe main">
+        <div className="col colum">Your Bid</div>
+        <div className="col colum">Date</div>
+        <div className="col colum">Bet</div>
+        <div className="col colum">Result</div>
+        <div className="col colum">Status</div>
+      </div>
       {items}
     </div>
   );
@@ -71,17 +72,15 @@ const Col5 = styled.div`
   width: 200px;
 `;
 
-const Btn = styled.div`
-  box-sizing: border-box;
-  width: 92px;
-  height: 26px;
-
-  text-align: center;
-  color: white;
-  font-size: 14px;
-  padding-top: 4px;
-
+const Btn = styled.span`
+  color: #ffffff;
+  font-family: 'Montserrat Medium';
+  font-size: 0.8em;
+  font-weight: 500;
   cursor: pointer;
 
-  background: url('./images/btn_w.png');
+  border-radius: 4px;
+  background-image: linear-gradient(180deg, #b4ec51 0%, #429321 100%);
+  padding: 0.194em 0.25em 0.139em 0.25em;
+  text-align: center;
 `;

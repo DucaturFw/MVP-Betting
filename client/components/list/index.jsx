@@ -27,8 +27,8 @@ export default class Predict extends Component {
 
   render() {
     return (
-      <Wrapper onClose={this.props.onClose} name="bids" className="oracles-list toggleable">
-        <Title>Your Bids List</Title>
+      <Wrapper onClose={this.props.onClose} name="bids" className="bids-list toggleable">
+        <h1>Your Bids List</h1>
         <Container>
           <Items bets={this.myTokens} />
         </Container>
@@ -40,7 +40,7 @@ export default class Predict extends Component {
 const Wrapper = styled(Popup)`
   background-color: rgba(255, 255, 255, 1);
   overflow: hidden;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
 `;
 
@@ -55,7 +55,6 @@ const Title = styled.div`
 `;
 
 const Container = styled.div`
-  text-align: center;
-  padding: 30px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
+  padding-bottom: 30px;
 `;

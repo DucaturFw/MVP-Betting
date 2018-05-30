@@ -25,8 +25,8 @@ export default class App extends Component {
     super(opts);
 
     this.state = {
-      predict: true,
-      bids: false,
+      predict: false,
+      bids: true,
       terms: false,
       oracles: false,
       faq: false,
@@ -73,7 +73,7 @@ export default class App extends Component {
 
     return (
       <div>
-        {/* <Hub status={this.state.status} /> */}
+        <Hub status={this.state.status} />
         <Header onMenuClick={this.onMenuClick} />
         <Counters tokens={this.state.data.tokens} curr={this.state.data.currRate} onPredictClick={this.handlePredict} />
         {/* <Range tokens={this.state.data.tokens} curr={this.state.data.currRate} /> */}

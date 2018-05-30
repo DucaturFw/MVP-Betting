@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
+import FA from 'react-fontawesome';
 // import theme from './styles/theme';
 import './styles/base.less';
 
@@ -26,7 +27,7 @@ export default class App extends Component {
 
     this.state = {
       predict: false,
-      bids: true,
+      bids: false,
       terms: false,
       oracles: false,
       faq: false,
@@ -40,8 +41,6 @@ export default class App extends Component {
   componentDidMount() {
     wallet.init().then(data => {
       let status = wallet.getStatus();
-
-      console.log('data', data);
 
       this.setState({
         loading: false,
@@ -57,7 +56,6 @@ export default class App extends Component {
   }
 
   onMenuClick = e => {
-    console.log('input');
     this.setState(state => ({
       ...state,
       [e]: !state[e]
@@ -68,7 +66,11 @@ export default class App extends Component {
     console.log('state', this.state);
 
     if (this.state.loading) {
-      return <div>Loading...</div>;
+      return (
+        <IconWrap>
+          <FA name="spinner" spin size="4x" />
+        </IconWrap>
+      );
     }
 
     return (
@@ -107,3 +109,13 @@ export default class App extends Component {
     );
   }
 }
+
+const IconWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+
+  color: #ccc;
+`;

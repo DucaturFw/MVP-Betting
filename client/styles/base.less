@@ -591,11 +591,16 @@ h1 {
 	margin: 12px 0 12px 0;
 }
 
+.faq.toggleable .li>p {
+	display: none;
+}
+
 .faq.toggleable .li-sel>h2 {
 	background-image: url(./images/up-arrow.png);
 }
 
 .faq.toggleable h2 {
+	padding-left: 20px;
 	color: #352e6c;
 	font-family: 'Montserrat Medium';
 	font-size: 18px;
@@ -603,15 +608,19 @@ h1 {
 	margin: 0;
 	background-image: url(./images/down-arrow.png);
 	background-repeat: no-repeat;
-	background-position: 990px;
+	background-position: 0;
 }
 
 .faq.toggleable .li-sel {
 	box-shadow: 0 1px 3px rgba(166, 196, 201, 0.12);
 	border-radius: 6px;
 	background-color: #f8f8f8;
-	padding: 17px 0 0 29px;
+	padding: 17px 0 15px 29px;
 	margin: 12px 0 12px 0;
+}
+
+.faq.toggleable .li-sel>p {
+	margin-top: 20px;
 }
 
 .faq.toggleable p {

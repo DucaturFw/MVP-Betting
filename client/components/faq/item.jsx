@@ -22,7 +22,7 @@ export default class Oracles extends Component {
     return (
       <Item>
         <Question>
-          {this.props.question}
+          <Title>{this.props.question}</Title>
           <Icon name="chevron-down" onClick={this.handleState} />
           <Answer show={this.state.open} dangerouslySetInnerHTML={{ __html: this.props.answer }} />
         </Question>
@@ -51,10 +51,22 @@ const Icon = styled(FA)`
   cursor: pointer;
 `;
 
+const Title = styled.h4`
+  color: #352e6c;
+  font-family: 'Montserrat Medium';
+  font-size: 0.778em;
+  font-weight: 500;
+  margin: 0;
+`;
+
 const Answer = styled.div`
   margin-top: 20px;
   display: ${props => (props.show ? 'block' : 'none')};
-  color: #666;
+  color: #352e6c;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 400;
+  padding-right: 1.7em;
 
   animation: showAll 0.25s cubic-bezier(0.06, 0.67, 0.37, 0.99) forwards;
 `;

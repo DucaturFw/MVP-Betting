@@ -6,35 +6,55 @@ import Popup from './../elements/popup';
 import Item from './item';
 
 export default class Oracles extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
   render() {
     return (
       <Wrapper onClose={this.props.onClose} name="faq" className="faq toggleable">
         <h1>faq</h1>
-        <div className="li">
-          <h2>Question One</h2>
-        </div>
-        <div className="li-sel">
-          <h2>Question Two</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-            dolore magna aliquam erat volutpat.
-            <br /> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-            aliquip ex ea commodo consequat.
-            <br /> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-            dolore eu feugiat nulla facilisis at vero eros et
-            <br />accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te
-            feugait nulla facilisi.
-          </p>
-        </div>
-        <div className="li">
-          <h2>Question Three</h2>
-        </div>
-        <div className="li">
-          <h2>Question Four</h2>
-        </div>
-        <div className="li">
-          <h2>Question Five</h2>
-        </div>
+        <Container>
+          <Item
+            question="How to participate in the game?"
+            answer={`Install the application for browser - <a href="https://metamask.io/">https://metamask.io/</a>, log in to your account. On the game’s web page click the button “make precision”, choose your bet. Now you’re in!`}
+          />
+          <Item
+            question="How is the game going?"
+            answer={`To begin with, ensure that you have already installed MetaMask and that there is enough money in Ethereum.
+            For example, if you and another 9 people make bets and 4 of them win. The bets of 6 losers (excluding the
+            website commission of 5%) share between 4 winners.`}
+          />
+          <Item
+            question="In what currency is the bet accepted?"
+            answer={`Install the application for browser - <a href="https://metamask.io/">https://metamask.io/</a>, log in to your account. On the game’s web page click the button “make precision”, choose your bet. Now you’re in!`}
+          />
+          <Item
+            question="How to participate in the game?"
+            answer={`Install the application for browser - <a href="https://metamask.io/">https://metamask.io/</a>, log in to your account. On the game’s web page click the button “make precision”, choose your bet. Now you’re in!`}
+          />
+          <Item
+            question="What gets the winner?"
+            answer={`If your prediction turned to be right, you will receive the amount of bets placed against your position
+            excluding the commission for transaction.`}
+          />
+          <Item
+            question="What loses the loser?"
+            answer={`If your prediction turned to be right, you will receive the amount of bets placed against your position
+            excluding the commission for transaction.`}
+          />
+          <Item
+            question="How do you ensure that the currency rate is correct?"
+            answer={`We provide the open log of currency rate information supply in Oracle. Also, you always can check the data
+            via <a href="https://coinmarketcap.com/">https://coinmarketcap.com/</a>.`}
+          />
+          <Item
+            question="From which sources the Oracle collects information?"
+            answer={`We synchronize the data with TOP-5 cryptocurrency exchanges: OKEx, Binance, Bitfinex, Huobi, Upbit.`}
+          />
+        </Container>
       </Wrapper>
     );
   }
@@ -44,4 +64,10 @@ const Wrapper = styled(Popup)`
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding-top: 30px;
+`;
+
+const Container = styled.div`
+  /* overflow-y: auto; */
+  padding-bottom: 30px;
 `;

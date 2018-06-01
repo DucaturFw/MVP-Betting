@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import _ from 'lodash';
+import BN from 'bn.js';
 
-import Lines from './lines';
-import Labels from './labels';
+import Wallet from './../../../models/wallet';
 
 const PRICE_RANGE = 100;
 
@@ -89,7 +89,11 @@ export default class Scale extends Component {
     if (this.state.spread[price]) {
       return (
         <div className="elementANegative">
-          <NegToken tokens={this.state.spread[price].length} />
+          <NegToken
+            tokens={this.state.spread[price].length}
+            onMouseEnter={this.mouseEnter.bind(this, price)}
+            onMouseLeave={this.mouseEnter.bind(this, null)}
+          />
         </div>
       );
     } else {
@@ -115,12 +119,38 @@ export default class Scale extends Component {
     if (this.state.spread[price]) {
       return (
         <div className="elementAPositive">
-          <PosToken tokens={this.state.spread[price].length} />
+          <PosToken
+            tokens={this.state.spread[price].length}
+            onMouseEnter={this.mouseEnter.bind(this, price)}
+            onMouseLeave={this.mouseEnter.bind(this, null)}
+          />
         </div>
       );
     } else {
       return <div className={cls} />;
     }
+  }
+
+  mouseEnter(price, event) {
+    let rect = event.target.getBoundingClientRect();
+    this.setState({ price, rect });
+  }
+
+  get tooltip() {
+    if (!this.state.price) return null;
+
+    const { price, rect, spread } = this.state;
+    const tokens = spread[price];
+    const sum = tokens.reduce((s, item) => s.add(new BN(item.payment, 10)), new BN(0, 10));
+    const inEth = Wallet.fromWei(sum.toString());
+
+    return (
+      <Tooltip style={{ left: rect.left + 40, top: 30 }}>
+        <div>
+          <span>Total bids: {inEth} ETH</span>
+        </div>
+      </Tooltip>
+    );
   }
 
   get items() {
@@ -170,8 +200,6 @@ export default class Scale extends Component {
     return (
       <div className="container_fluid scale">
         <div className="container_line">
-          {/* <StyledLines curr={curr} tokens={tokens} />
-        <Labels curr={curr} /> */}
           <div className="content_line">
             <div className="element_line_side">
               <div className="element_line_column">
@@ -205,6 +233,8 @@ export default class Scale extends Component {
               </div>
             </div>
           </div>
+
+          {this.tooltip}
         </div>
       </div>
     );
@@ -225,4 +255,22 @@ const PosToken = styled.div`
   background: #48c72f;
   transform: translateY(-100%);
   top: 0.25em;
+`;
+
+const Tooltip = styled.div`
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  padding: 5px 10px;
+
+  color: white;
+  overflow: hidden;
+
+  font-size: 14px;
+
+  left: 795px;
+  top: -110px;
 `;

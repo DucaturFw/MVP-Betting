@@ -163,9 +163,6 @@ export default class Scale extends Component {
   render() {
     return (
       <Container className={this.props.className}>
-        <PreLine src="./images/dashed.png" />
-        <Line src="./images/line.png" />
-        <PreLine src="./images/dashed.png" />
         {this.tokens}
         {this.points}
         {this.negativeDel}

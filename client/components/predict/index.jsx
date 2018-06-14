@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import FA from 'react-fontawesome';
 
 import Popup from './../elements/popup';
 
 import Wallet from './../../models/wallet';
+
+const STEP = 0.01;
 
 export default class Predict extends Component {
   constructor(opts) {
@@ -14,7 +15,7 @@ export default class Predict extends Component {
     this.state = {
       from: 10000,
       to: 10100,
-      amount: 0.1,
+      amount: STEP,
       text: '',
       available: false,
       loading: false,
@@ -47,7 +48,7 @@ export default class Predict extends Component {
   setDifference() {
     const { from, amount } = this.state;
     const price = parseFloat(amount, 10);
-    const difference = price > 1 ? 1000 : Math.round(price / 0.1) * 100;
+    const difference = price > STEP * 10 ? 1000 : Math.round(price / STEP) * 100;
 
     this.setState({
       difference,
